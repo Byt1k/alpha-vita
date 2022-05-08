@@ -209,7 +209,7 @@ a, button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 30px;
+  gap: 35px;
 }
 
 .navbar .left .item {
@@ -232,13 +232,13 @@ a, button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 30px;
+  gap: 35px;
 }
 
 .navbar .right .select select {
   background: transparent;
   color: #fff;
-  max-width: 90px;
+  max-width: 75px;
   cursor: pointer;
 }
 
@@ -266,9 +266,6 @@ a, button {
 .header {
   width: 1020px;
   margin: 16px auto 0 auto;
-}
-
-.header .headerContainer {
   padding: 17px 26px;
   background: #FFFFFF;
   -webkit-box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.05);
@@ -285,7 +282,7 @@ a, button {
           justify-content: space-between;
 }
 
-.header .headerContainer .logo {
+.header .logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -294,25 +291,25 @@ a, button {
           align-items: center;
 }
 
-.header .headerContainer .logo span {
+.header .logo span {
   font-size: 18px;
   font-weight: 700;
   color: #081B43;
 }
 
-.header .headerContainer .logo:hover svg path {
+.header .logo:hover svg path {
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
   fill: #FE6E27;
 }
 
-.header .headerContainer .logo:hover span {
+.header .logo:hover span {
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
   color: #FE6E27;
 }
 
-.header .headerContainer .menu {
+.header .menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -322,15 +319,15 @@ a, button {
   gap: 47px;
 }
 
-.header .headerContainer .menu li a {
+.header .menu li a {
   color: #081B43;
 }
 
-.header .headerContainer .menu li a:hover {
+.header .menu li a:hover {
   color: #FE6E27;
 }
 
-.header .headerContainer .actions {
+.header .actions {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -340,7 +337,7 @@ a, button {
   gap: 8px;
 }
 
-.header .headerContainer .actions .icon {
+.header .actions .icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -359,7 +356,7 @@ a, button {
   position: relative;
 }
 
-.header .headerContainer .actions .icon .count {
+.header .actions .icon .count {
   position: absolute;
   top: 4px;
   right: 3px;
@@ -382,13 +379,13 @@ a, button {
   padding: 0 2px;
 }
 
-.header .headerContainer .actions .icon:not(.cart):hover svg path {
+.header .actions .icon:not(.cart):hover svg path {
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
   fill: #FE6E27;
 }
 
-.header .headerContainer .actions .icon.cart:hover svg path {
+.header .actions .icon.cart:hover svg path {
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
   stroke: #FE6E27;
@@ -477,10 +474,6 @@ h2 {
   right: 0;
   margin: 0 auto;
   z-index: 10;
-}
-
-.main .mainSlider .item {
-  height: 600px;
 }
 
 .main .mainSlider .item img {
@@ -586,6 +579,7 @@ h2 {
   -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
+  min-width: 59px;
   width: 59px;
   height: 59px;
   display: -webkit-box;
@@ -603,6 +597,7 @@ h2 {
 
 .categories .categoriesWrapper .item span {
   color: #464C4C;
+  white-space: nowrap;
 }
 
 .catalog {
@@ -1013,7 +1008,6 @@ h2 {
           justify-content: space-between;
   padding-bottom: 42px;
   border-bottom: 1px solid #081B43;
-  gap: 36px;
 }
 
 .activity .activityWrapper .item {
@@ -1046,6 +1040,7 @@ h2 {
 
 .activity .activityWrapper .item span {
   color: #081B43;
+  white-space: nowrap;
 }
 
 .activity .activityWrapper .item:hover .icon {
@@ -1104,6 +1099,7 @@ h2 {
 .footer .top .menu ul li a {
   color: #464C4C;
   font-size: 12px;
+  white-space: nowrap;
 }
 
 .footer .top .payment {
@@ -1116,10 +1112,11 @@ h2 {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  gap: 12px;
 }
 
 .footer .top .payment img {
-  margin-bottom: 18px;
+  margin-bottom: 15px;
 }
 
 .footer .top .up {
@@ -1182,4 +1179,126 @@ h2 {
   display: -ms-flexbox;
   display: flex;
   gap: 5px;
+}
+
+@media screen and (max-width: 1300px) {
+  .owl-carousel .owl-nav {
+    width: 100%;
+  }
+  .popular .popularRow .owl-nav {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  h1 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  h2 {
+    font-size: 30px;
+  }
+  .main .mainSlider .item img {
+    top: 60px;
+  }
+  .catalog .item .top img {
+    height: 245px;
+  }
+}
+
+.navbar .mobile {
+  display: none;
+}
+
+.first-slider img, .second-slider img, .third-slider img {
+  max-width: 100%;
+}
+
+@media screen and (max-width: 992px) {
+  .header,
+  .navbar .left .item,
+  .navbar .right .socialNetworks {
+    display: none;
+  }
+  .navbar {
+    background-color: #fff;
+  }
+  .navbar .mobile {
+    display: block;
+  }
+  .navbar .left .logo img {
+    max-width: 30px;
+  }
+  .navbar .right {
+    margin: 0 auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .navbar .right .select select {
+    color: #081B43;
+  }
+  .navbar .right .select select option {
+    background-color: #fff;
+    color: #081B43;
+  }
+  .navbar .burger {
+    text-align: right;
+  }
+  .navbar .burger img {
+    cursor: pointer;
+  }
+  .main .mainSlider .item img {
+    top: 0;
+  }
+  .main .mainSlider .item .offer {
+    margin-top: 110px;
+  }
+  .categories .categoriesWrapper {
+    gap: 30px;
+    overflow: auto;
+  }
+  .catalog .item {
+    margin-bottom: 20px;
+  }
+  .first-slider, .second-slider, .third-slider {
+    padding: 50px 0;
+  }
+  .first-slider a {
+    margin: 20px 0 40px 0;
+  }
+  .second-slider h1 {
+    margin-top: 0;
+  }
+  .second-slider .actions {
+    margin: 20px 0 40px 0;
+  }
+  .second-slider img {
+    margin-top: 30px;
+  }
+  .third-slider h1 {
+    margin-top: 30px;
+  }
+  .third-slider .text {
+    margin-bottom: 0;
+  }
+  .third-slider .actions {
+    margin: 20px 0 40px 0;
+  }
+  .actual-news .row.wrapper {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 30px;
+  }
+  .actual-news .btn {
+    margin-top: 30px;
+  }
+  .activity .activityWrapper {
+    overflow-x: auto;
+    gap: 30px;
+  }
+  .footer .top {
+    display: none;
+  }
 }

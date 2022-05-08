@@ -102,7 +102,7 @@ a, button {
     .left {
         display: flex;
         align-items: center;
-        gap: 30px;
+        gap: 35px;
 
         .item {
             display: flex;
@@ -117,13 +117,13 @@ a, button {
     .right {
         display: flex;
         align-items: center;
-        gap: 30px;
+        gap: 35px;
 
         .select {
             select {
                 background: transparent;
                 color: #fff;
-                max-width: 90px;
+                max-width: 75px;
                 cursor: pointer;
                 
                 option {
@@ -151,98 +151,95 @@ a, button {
 .header {
     width: 1020px;
     margin: 16px auto 0 auto;
-    
-    .headerContainer {
-        padding: 17px 26px;
-        background: #FFFFFF;
-        box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.05);
-        border-radius: 4px;
+    padding: 17px 26px;
+    background: #FFFFFF;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        
+        span {
+            font-size: 18px;
+            font-weight: 700;
+            color: $secondaryColor;
+        }
 
-        .logo {
-            display: flex;
-            align-items: center;
-            
-            span {
-                font-size: 18px;
-                font-weight: 700;
-                color: $secondaryColor;
+        &:hover {
+            svg path {
+                transition: all .3s ease;
+                fill: $mainColor
             }
+
+            span {
+                transition: all .3s ease;
+                color: $mainColor;
+            }
+        }
+    }
+
+    .menu {
+        display: flex;
+        align-items: center;
+        gap: 47px;
+
+        li a {
+            color: $secondaryColor;
 
             &:hover {
-                svg path {
-                    transition: all .3s ease;
-                    fill: $mainColor
-                }
-
-                span {
-                    transition: all .3s ease;
-                    color: $mainColor;
-                }
+                color: $mainColor;
             }
         }
+    }
 
-        .menu {
+    .actions {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        .icon {
             display: flex;
             align-items: center;
-            gap: 47px;
+            justify-content: center;
+            width: 43px;
+            height: 43px;
+            background: #FFFFFF;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+            position: relative;
 
-            li a {
-                color: $secondaryColor;
-
-                &:hover {
-                    color: $mainColor;
-                }
-            }
-        }
-
-        .actions {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-
-            .icon {
+            .count {
+                position: absolute;
+                top: 4px;
+                right: 3px;
+                background-color: $mainColor;
+                color: #fff;
+                font-size: 12px;
+                font-weight: 500;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                width: 43px;
-                height: 43px;
-                background: #FFFFFF;
-                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-                border-radius: 4px;
-                position: relative;
+                min-width: 12px;
+                height: 12px;
+                border-radius: 2px;
+                padding: 0 2px;
+            }
 
-                .count {
-                    position: absolute;
-                    top: 4px;
-                    right: 3px;
-                    background-color: $mainColor;
-                    color: #fff;
-                    font-size: 12px;
-                    font-weight: 500;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    min-width: 12px;
-                    height: 12px;
-                    border-radius: 2px;
-                    padding: 0 2px;
+            &:not(.cart):hover  {
+                svg path {
+                    transition: all .3s ease;
+                    fill: $mainColor;
                 }
+            }
 
-                &:not(.cart):hover  {
-                    svg path {
-                        transition: all .3s ease;
-                        fill: $mainColor;
-                    }
-                }
-
-                &.cart:hover {
-                    svg path {
-                        transition: all .3s ease;
-                        stroke: $mainColor;
-                    }
+            &.cart:hover {
+                svg path {
+                    transition: all .3s ease;
+                    stroke: $mainColor;
                 }
             }
         }
@@ -330,7 +327,6 @@ h2 {
 
     .mainSlider {
         .item {
-            height: 600px;
             
             img {
                 max-width: 100%;
@@ -423,6 +419,7 @@ h2 {
                 background-color: $mainColor;
                 box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
                 border-radius: 4px;
+                min-width: 59px;
                 width: 59px;
                 height: 59px;
                 display: flex;
@@ -433,6 +430,7 @@ h2 {
     
             span {
                 color: #464C4C;
+                white-space: nowrap;
             }
         }
 
@@ -811,7 +809,6 @@ h2 {
         justify-content: space-between;
         padding-bottom: 42px;
         border-bottom: 1px solid $secondaryColor;
-        gap: 36px;
 
         .item {
             display: flex;
@@ -831,6 +828,7 @@ h2 {
 
             span {
                 color: $secondaryColor;
+                white-space: nowrap;
             }
 
             &:hover {
@@ -889,6 +887,7 @@ h2 {
                 li a {
                     color: #464C4C;
                     font-size: 12px;
+                    white-space: nowrap;
                 }
             }
         }
@@ -898,9 +897,10 @@ h2 {
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
+            gap: 12px;
             
             img {
-                margin-bottom: 18px;
+                margin-bottom: 15px;
             }
         }
 
@@ -952,5 +952,209 @@ h2 {
         }
     }
 }
+
+
+@media screen and (max-width: 1300px) {
+    .owl-carousel {
+        .owl-nav {
+            width: 100%;
+        }
+    }
+
+    .popular .popularRow .owl-nav {
+        margin-left: 0;
+    }
+
+
+}
+
+
+@media screen and (max-width: 1200px) {
+    h1 {
+        font-size: 36px;
+        line-height: 40px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+    
+    .main .mainSlider .item img {
+        top: 60px;
+    }
+
+    .catalog {
+
+        .item {
+
+            .top img {
+                height: 245px;
+            }
+
+        }
+    }
+}
+
+
+// common
+.navbar .mobile {
+    display: none;
+}
+
+.first-slider, .second-slider, .third-slider {
+    img {
+        max-width: 100%;
+    } 
+}
+
+// 
+
+@media screen and (max-width: 992px) {
+    .header, 
+    .navbar .left .item, 
+    .navbar .right .socialNetworks {
+        display: none;
+    }
+
+    .navbar {
+        background-color: #fff;
+
+        .mobile {
+            display: block;
+        }
+
+        .left {
+            .logo img {
+                max-width: 30px;
+            }
+        }
+        
+        .right {
+            margin: 0 auto;
+            justify-content: center;
+
+            .select select {
+                color: $secondaryColor;
+
+                option {
+                    background-color: #fff;
+                    color: $secondaryColor;
+                }
+            }
+        }
+
+        .burger {
+            text-align: right;
+
+            img {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .main {
+        .mainSlider {
+            .item {
+                img {
+                    top: 0;
+                }
+
+                .offer {
+                    margin-top: 110px;
+                }
+            }
+
+        }
+    }
+
+    .categories {
+        .categoriesWrapper {
+            gap: 30px;
+            overflow: auto;
+        }
+    }
+
+    .catalog {
+        .item {
+            margin-bottom: 20px;
+        }
+    }
+
+    .first-slider, .second-slider, .third-slider {
+        padding: 50px 0;
+    }
+
+    .first-slider {
+        a {
+            margin: 20px 0 40px 0;
+        }
+    }
+
+    .second-slider {
+        h1 {
+            margin-top: 0;
+        }
+
+        .actions {
+            margin: 20px 0 40px 0;
+        }
+
+        img {
+            margin-top: 30px;
+        }
+    }
+
+    .third-slider {
+        h1 {
+            margin-top: 30px;
+        }
+
+        .text {
+            margin-bottom: 0;
+        }
+
+        .actions {
+            margin: 20px 0 40px 0;
+        }
+    }
+
+    .actual-news {
+        .row.wrapper {
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            padding-bottom: 30px;
+        }
+
+        .btn {
+            margin-top: 30px;
+        }
+    }
+
+    .activity {
+        .activityWrapper {
+            overflow-x: auto;
+            gap: 30px;
+        }
+    }
+
+    .footer {
+        .top {
+            display: none;
+        }
+    }
+    
+}
+
+@media screen and (max-width: 767px) {
+
+}
+
+@media screen and (max-width: 576px) {
+
+}
+
+
+
+
 
 
