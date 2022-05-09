@@ -40,7 +40,8 @@ $('.popularRow1').owlCarousel({
     dots: false,
     responsive: {
         1200: {
-            items: 4
+            items: 4,
+            nav: true
         },
         992: {
             nav: true
@@ -49,7 +50,8 @@ $('.popularRow1').owlCarousel({
             items: 3
         },
         0: {
-            nav: false
+            nav: false,
+            items: 1.5
         }
     },
     navText: [
@@ -64,7 +66,8 @@ $('.popularRow2').owlCarousel({
     dots: false,
     responsive: {
         1200: {
-            items: 4
+            items: 4,
+            nav: true
         },
         992: {
             nav: true
@@ -73,7 +76,8 @@ $('.popularRow2').owlCarousel({
             items: 3
         },
         0: {
-            nav: false
+            nav: false,
+            items: 1.5
         }
         
     },
@@ -89,6 +93,22 @@ $('.third-slider').owlCarousel({
     nav: false,
     dots: true,
     items: 1
+})
+
+
+// Мобильное меню
+
+const mobileMenu = document.querySelector('.mobile-menu')
+const btnMenuOpen = document.querySelector('.burger')
+const btnMenuClose = document.querySelector('.mobile-menu .close')
+
+btnMenuOpen.addEventListener('click', () => {
+    mobileMenu.classList.add('active')
+})
+
+
+btnMenuClose.addEventListener('click', () => {
+    mobileMenu.classList.remove('active')
 })
 
 
