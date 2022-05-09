@@ -1002,20 +1002,22 @@ h2 {
 }
 
 .mobile-menu {
+    transition: all .3s ease;
     padding: 25px 40px 16px 40px;
-    position: absolute;
+    position: fixed;
     z-index: 999;
     top: 0;
-    right: -100%; 
+    left: 100%;
+    right: -100%;
+    bottom: 0; 
     width: 100%;
-    height: 100%;
-    min-height: 800px;
     background-color: $secondaryColor;
     color: #fff;
-    transition: all .3s ease;
+    overflow: scroll;
 
     &.active {
         right: 0;
+        left: 0;
     }
     
     .mobile-menu-wrapper {
@@ -1435,7 +1437,16 @@ h2 {
 
 }
 
-
+@media (orientation: landscape) {
+    .mobile-menu {
+        .mobile-menu-wrapper {
+            .bottom {
+                position: relative;
+                margin-top: 65px;
+            }
+        }
+    }
+}
 
 
 

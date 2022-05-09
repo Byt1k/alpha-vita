@@ -1195,22 +1195,24 @@ h2 {
 }
 
 .mobile-menu {
-  padding: 25px 40px 16px 40px;
-  position: absolute;
-  z-index: 999;
-  top: 0;
-  right: -100%;
-  width: 100%;
-  height: 100%;
-  min-height: 800px;
-  background-color: #081B43;
-  color: #fff;
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
+  padding: 25px 40px 16px 40px;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 100%;
+  right: -100%;
+  bottom: 0;
+  width: 100%;
+  background-color: #081B43;
+  color: #fff;
+  overflow: scroll;
 }
 
 .mobile-menu.active {
   right: 0;
+  left: 0;
 }
 
 .mobile-menu .mobile-menu-wrapper {
@@ -1565,5 +1567,12 @@ h2 {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+}
+
+@media (orientation: landscape) {
+  .mobile-menu .mobile-menu-wrapper .bottom {
+    position: relative;
+    margin-top: 65px;
   }
 }
