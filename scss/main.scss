@@ -1408,6 +1408,17 @@ h2 {
         }
     }
 
+    .popular {
+        .product {
+            width: 250px;
+            margin: 0 auto;
+        }
+
+        .popularRow2 {
+            display: none;
+        }
+    }
+
     .footer {
         .bottom {
             .credits {
@@ -1421,6 +1432,7 @@ h2 {
     .mobile-menu {
         .mobile-menu-wrapper {
             min-height: 750px;
+
             .bottom {
                 .menu {
                     flex-direction: row;

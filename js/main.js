@@ -37,21 +37,22 @@ $('.second-slider').owlCarousel({
 $('.popularRow1').owlCarousel({
     loop: true,
     margin: 23,
-    dots: false,
     responsive: {
         1200: {
             items: 4,
             nav: true
         },
         992: {
-            nav: true
+            nav: true,
+            dots: false
         },
         768: {
             items: 3
         },
         0: {
+            dots: true,
             nav: false,
-            items: 1.5
+            items: 1
         }
     },
     navText: [
@@ -63,23 +64,23 @@ $('.popularRow1').owlCarousel({
 $('.popularRow2').owlCarousel({
     loop: true,
     margin: 23,
-    dots: false,
     responsive: {
         1200: {
             items: 4,
             nav: true
         },
         992: {
-            nav: true
+            nav: true,
+            dots: false
         },
         768: {
             items: 3
         },
         0: {
+            dots: true,
             nav: false,
-            items: 1.5
+            items: 1
         }
-        
     },
     navText: [
         '<img src="img/carousel-prev.svg" alt="prev" />',

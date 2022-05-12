@@ -1546,6 +1546,13 @@ h2 {
   .third-slider .owl-dots {
     top: 430px;
   }
+  .popular .product {
+    width: 250px;
+    margin: 0 auto;
+  }
+  .popular .popularRow2 {
+    display: none;
+  }
   .footer .bottom .credits {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
