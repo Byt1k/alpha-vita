@@ -1556,6 +1556,9 @@ h2 {
             align-items: center;
     gap: 25px;
   }
+  .mobile-menu .mobile-menu-wrapper {
+    min-height: 750px;
+  }
   .mobile-menu .mobile-menu-wrapper .bottom .menu {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
