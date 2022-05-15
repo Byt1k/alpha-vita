@@ -18,36 +18,36 @@ $('.mainSlider').owlCarousel({
 
 })
 
-$('.first-slider').owlCarousel({
+const mainPageSliderOpts = {
     loop: true,
     margin: 10,
     nav: false,
     dots: true,
     items: 1
-})
+}
 
-$('.second-slider').owlCarousel({
-    loop: true,
-    margin: 10,
-    nav: false,
-    dots: true,
-    items: 1
-})
+$('.first-slider').owlCarousel(mainPageSliderOpts)
 
-$('.popularRow1').owlCarousel({
+$('.second-slider').owlCarousel(mainPageSliderOpts)
+
+$('.third-slider').owlCarousel(mainPageSliderOpts)
+
+const popularSliderOpts = {
     loop: true,
     margin: 23,
     responsive: {
         1200: {
             items: 4,
-            nav: true
+            nav: true,
+            dots: false
         },
         992: {
             nav: true,
             dots: false
         },
         768: {
-            items: 3
+            items: 3,
+            dots: false
         },
         0: {
             dots: true,
@@ -59,42 +59,11 @@ $('.popularRow1').owlCarousel({
         '<img src="img/carousel-prev.svg" alt="prev" />',
         '<img src="img/carousel-next.svg" alt="next" />'
     ]
-})
+}
 
-$('.popularRow2').owlCarousel({
-    loop: true,
-    margin: 23,
-    responsive: {
-        1200: {
-            items: 4,
-            nav: true
-        },
-        992: {
-            nav: true,
-            dots: false
-        },
-        768: {
-            items: 3
-        },
-        0: {
-            dots: true,
-            nav: false,
-            items: 1
-        }
-    },
-    navText: [
-        '<img src="img/carousel-prev.svg" alt="prev" />',
-        '<img src="img/carousel-next.svg" alt="next" />'
-    ]
-})
+$('.popularRow1').owlCarousel(popularSliderOpts)
 
-$('.third-slider').owlCarousel({
-    loop: true,
-    margin: 10,
-    nav: false,
-    dots: true,
-    items: 1
-})
+$('.popularRow2').owlCarousel(popularSliderOpts)
 
 
 // Мобильное меню
