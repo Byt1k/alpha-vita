@@ -36,6 +36,12 @@
 
         }
     }
+
+    .breadcrumbs {
+        ul {
+            width: 100%;
+        }
+    }
 }
 
 @media screen and (max-width: 992px) {
@@ -172,6 +178,11 @@
             display: none;
         }
     }     
+
+    .breadcrumbs {
+        display: none;
+    }
+
 }
 
 @media screen and (max-width: 767px) {

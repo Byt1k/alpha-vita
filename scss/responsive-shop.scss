@@ -1,0 +1,73 @@
+@media screen and (max-width: 992px) {
+    .shop-categories {
+        padding-top: 12px;
+
+        .categoriesWrapper {
+            padding-bottom: 12px;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .filter {
+        .filterWrapper {
+            .left {
+                p {
+                    display: none;
+                }
+            }
+
+            .right {
+                .sort {
+                    width: 150px;
+
+                    select {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    .shop {
+        .item {
+           .bottom {
+               .addToCart {   
+                    background-color: #FE6E27;
+                    padding: 10px;
+                    span {
+                        color: #fff;
+                        font-size: 12px;
+                    }
+
+                    .icon {
+                        display: none;
+                    }
+                }
+           } 
+        }
+    }
+
+    .subscribe {
+        .subscribeWrapper {
+
+            .title {
+                text-align: center;
+            }
+
+            span {
+                width: 100%;
+            }
+
+            .form {
+                flex-direction: column;
+                width: 100%;
+
+                input {
+                    width: 100%;
+                }
+            }
+
+        }
+    }
+}

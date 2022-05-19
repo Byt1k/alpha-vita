@@ -205,7 +205,7 @@
                 <div class="col-xl-11 mx-auto">
                     <div class="filterWrapper">
                         <div class="left">
-                            <div class="filter-open">
+                            <div class="filter-open" data-bs-toggle="modal" data-bs-target="#filter">
                                 <img src="img/filter.svg" alt="filter">
                                 <span>Фильтры</span>
                             </div>
@@ -230,7 +230,7 @@
     <section class="shop">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3">
+                <div class="col-lg-3 col-md-4 col-6">
                     <div class="item product">
                         <div class="top">
                             <img src="img/popular-photo.png" alt="product" class="photo">
@@ -284,7 +284,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3 col-md-4 col-6">
                     <div class="item product">
                         <div class="top">
                             <img src="img/popular-photo.png" alt="product" class="photo">
@@ -338,7 +338,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3 col-md-4 col-6">
                     <div class="item product">
                         <div class="top">
                             <img src="img/popular-photo.png" alt="product" class="photo">
@@ -392,7 +392,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3 col-md-4 col-6">
                     <div class="item product">
                         <div class="top">
                             <img src="img/popular-photo.png" alt="product" class="photo">
@@ -446,7 +446,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3 col-md-4 col-6">
                     <div class="item product">
                         <div class="top">
                             <img src="img/popular-photo.png" alt="product" class="photo">
@@ -500,8 +500,7 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="col-lg-3">
+                <div class="col-lg-3 col-md-4 col-6">
                     <div class="item product">
                         <div class="top">
                             <img src="img/popular-photo.png" alt="product" class="photo">
@@ -555,7 +554,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3 col-md-4 col-6">
                     <div class="item product">
                         <div class="top">
                             <img src="img/popular-photo.png" alt="product" class="photo">
@@ -609,7 +608,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3 col-md-4 col-6">
                     <div class="item product">
                         <div class="top">
                             <img src="img/popular-photo.png" alt="product" class="photo">
@@ -663,7 +662,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3 col-md-4 col-6">
                     <div class="item product">
                         <div class="top">
                             <img src="img/popular-photo.png" alt="product" class="photo">
@@ -717,7 +716,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3 col-md-4 col-6">
                     <div class="item product">
                         <div class="top">
                             <img src="img/popular-photo.png" alt="product" class="photo">
@@ -771,7 +770,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3 col-md-4 col-6">
                     <div class="item product">
                         <div class="top">
                             <img src="img/popular-photo.png" alt="product" class="photo">
@@ -825,7 +824,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3 col-md-4 col-6">
                     <div class="item product">
                         <div class="top">
                             <img src="img/popular-photo.png" alt="product" class="photo">
@@ -1185,6 +1184,132 @@
         </div>
     </div>
 
+    <!-- Фильтр по категории -->
+
+    <div class="modal fade filter-block" id="filter" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" >
+                    <img src="img/filter-close.svg" alt="close">
+                </button>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <p class="title">Фильтр по категории</p>
+                            <div class="accordion" id="accordionFilter">
+                                <div class="accordion-item">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="true" aria-controls="collapse-1">
+                                        Здоровье
+                                    </button>
+                                    <div id="collapse-1" class="accordion-collapse collapse show" aria-labelledby="heading-1" data-bs-parent="#accordionFilter">
+                                        <div class="accordion-body">
+                                            <ul>
+                                                <li><a href="#">Витаминно-минеральные комплексы</a></li>
+                                                <li><a href="#">Минералы органические</a></li>
+                                                <li><a href="#">Комплексы с омега 3-6-9</a></li>
+                                                <li><a href="#">Сильный иммунитет</a></li>
+                                                <li><a href="#">Детокс и очищение организма</a></li>
+                                                <li><a href="#">Суставы</a></li>
+                                                <li><a href="#">ANTI AGE</a></li>
+                                                <li><a href="#">Поддержка ЖКТ</a></li>
+                                                <li><a href="#">Микрофлора кишечника</a></li>
+                                                <li><a href="#">Защита печени</a></li>
+                                                <li><a href="#">Защита почек</a></li>
+                                                <li><a href="#">Защита сердца</a></li>
+                                                <li><a href="#">Защита сосудов</a></li>
+                                                <li><a href="#">Антигеморроидальные средства</a></li>
+                                                <li><a href="#">Поддержка костной ткани</a></li>
+                                                <li><a href="#">Защита зрения</a></li>
+                                                <li><a href="#">Профилактика аллергии</a></li>
+                                                <li><a href="#">Профилактика диабета</a></li>
+                                                <li><a href="#">Антипаразитарная защита</a></li>
+                                                <li><a href="#">Поддержка мозга</a></li>
+                                                <li><a href="#">Успокоительные средства</a></li>
+                                                <li><a href="#">Красота и здоровье женщин</a></li>
+                                                <li><a href="#">Для мужчин</a></li>
+                                                <li><a href="#">Для детей</a></li>
+                                                <li><a href="#">Для вегетарианцев</a></li>
+                                                <li><a href="#">Для беременных и кормящих мам</a></li>
+                                                <li><a href="#">Бальзамы</a></li>
+                                                <li><a href="#">Травяные сборы и фиточаи</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-2" aria-expanded="false" aria-controls="collapse-2">
+                                        Спорт
+                                    </button>
+                                    <div id="collapse-2" class="accordion-collapse collapse" aria-labelledby="heading-2" data-bs-parent="#accordionFilter">
+                                        <div class="accordion-body">
+                                            <ul>
+                                                <li><a href="#">Пункт 1</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-3" aria-expanded="false" aria-controls="collapse-3">
+                                        Питание
+                                    </button>
+                                    <div id="collapse-3" class="accordion-collapse collapse" aria-labelledby="heading-3" data-bs-parent="#accordionFilter">
+                                        <div class="accordion-body">
+                                            <ul>
+                                                <li><a href="#">Пункт 1</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-4" aria-expanded="false" aria-controls="collapse-4">
+                                        Красота
+                                    </button>
+                                    <div id="collapse-4" class="accordion-collapse collapse" aria-labelledby="heading-4" data-bs-parent="#accordionFilter">
+                                        <div class="accordion-body">
+                                            <ul>
+                                                <li><a href="#">Пункт 1</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-5" aria-expanded="false" aria-controls="collapse-4">
+                                        Разное
+                                    </button>
+                                    <div id="collapse-5" class="accordion-collapse collapse" aria-labelledby="heading-5" data-bs-parent="#accordionFilter">
+                                        <div class="accordion-body">
+                                            <ul>
+                                                <li><a href="#">Пункт 1</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-6" aria-expanded="false" aria-controls="collapse-6">
+                                        Новинки
+                                    </button>
+                                    <div id="collapse-6" class="accordion-collapse collapse" aria-labelledby="heading-6" data-bs-parent="#accordionFilter">
+                                        <div class="accordion-body">
+                                            <ul>
+                                                <li><a href="#">Пункт 1</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="title">Фильтр по цене</p>
+                            <div class="filter-price d-flex align-items-center gap-3">
+                                <input type="number" placeholder="0 000">
+                                <span>-</span>
+                                <input type="number" placeholder="0 000">
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+      </div>
 
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>    

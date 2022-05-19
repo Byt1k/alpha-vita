@@ -21,6 +21,9 @@
   .catalog .item .top img {
     height: 245px;
   }
+  .breadcrumbs ul {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 992px) {
@@ -109,6 +112,9 @@
     gap: 30px;
   }
   .footer .top {
+    display: none;
+  }
+  .breadcrumbs {
     display: none;
   }
 }
