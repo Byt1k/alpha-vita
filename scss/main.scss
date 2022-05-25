@@ -1465,10 +1465,194 @@ h2 {
 
 //
 
+// Программа
+
+.program-item {
+    .main-photo {
+        max-width: 100%;
+
+        &.mobile {
+            display: none;
+        }
+    }
+
+    .offer {
+        padding: 20px 0 40px 20px;
+
+        .title {
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 28px;
+            margin-bottom: 7px;
+        }
+
+        .program-rating {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 18px 0 15px 0;
+
+            .rating {
+                gap: 4px;
+
+                .star {
+                    width: 15px;
+
+                    svg {
+                        width: 100%;
+                    }
+                }
+            }
+            
+            > p {
+                font-size: 16px;    
+            }
+        }
+
+        .text {
+            color: #464C4C;
+        }
+
+        .btn {
+            @extend %mainBtn;
+            margin: 29px 0 52px 0;
+        }
+
+        .type {
+            .title {
+                color: #000;
+                font-size: 16px;
+                font-weight: 600;
+                margin-bottom: 7px;
+            }
+
+            .types {
+                display: flex;
+                gap: 27px;
+
+                .item {
+                    width: 132px;
+                    text-align: center;
+                   
+                    img {
+                        max-width: 100%;
+                        margin-bottom: 3px;
+                    }
+
+                    p {
+                        color: #000;
+                    }
+                }
+            }
+        }
+    }
+
+    .nav-tabs {
+        border: 0;
+        gap: 40px;
+        margin-bottom: 36px;
+
+        .nav-item {
+            .nav-link {
+                border: 0;
+                background-color: #fff;
+                margin: 0;
+                padding: 0 0 4px 0;
+                color: $secondaryColor;
+                font-size: 20px;
+                font-weight: 600;
+
+                &.active {
+                    color: $mainColor;
+                    border-bottom: 2px solid $mainColor;
+                }
+            }
+        }
+    }
+
+    .tab-content {
+        .about {
+            color: #464C4C;
+
+            .desc {
+                margin-bottom: 34px;
+            }
+
+            .item {
+                display: flex;
+                gap: 20px;
+                margin-bottom: 20px;
+
+                .number {
+                    font-weight: 600;
+                    font-size: 36px;
+                    line-height: 42px;
+                    margin-left: -41px;
+                }
+
+                .content {
+                    .title {
+                        margin-top: 7px;
+                        font-weight: 600;
+                        font-size: 24px;
+                        line-height: 28px;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+
+            .btn {
+                @extend %mainBtn;
+                margin: 12px auto 12px auto;
+            }
+        }
+    }
+
+    .desc-bottom {
+        color: #464C4C;
+        margin-top: 50px;
+    }
+}
+
+// 
+
 @media screen and (max-width: 1200px) {
     .program-filter {
         .program-filter-wrapper {
             width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .program-item {
+        .main-photo {
+            &.desktop {
+                display: none;
+            }
+
+            &.mobile {
+                display: block;
+                margin: 0 auto;
+                max-height: 300px;
+                object-fit: cover;
+            }
+        }
+
+        .tab-content .about .item {
+            gap: 10px;
+
+            .number {
+                margin-left: 0;
+                font-size: 18px;
+                line-height: 21px;
+            }
+
+            .content .title {
+                font-size: 18px;
+                line-height: 21px;
+                margin-top: 0;
+            }
         }
     }
 }

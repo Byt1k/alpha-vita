@@ -117,7 +117,7 @@ a, button {
   transition: all .3s ease;
 }
 
-.main .mainSlider .item .offer a, .first-slider a, .second-slider .actions .btn, .third-slider .actions .btn {
+.main .mainSlider .item .offer a, .first-slider a, .second-slider .actions .btn, .third-slider .actions .btn, .program-item .offer .btn, .program-item .tab-content .about .btn {
   font-size: 14px;
   color: #fff;
   display: -webkit-box;
@@ -137,13 +137,13 @@ a, button {
   text-transform: uppercase;
 }
 
-.main .mainSlider .item .offer a.buy:hover, .first-slider a.buy:hover, .second-slider .actions .buy.btn:hover, .third-slider .actions .buy.btn:hover {
+.main .mainSlider .item .offer a.buy:hover, .first-slider a.buy:hover, .second-slider .actions .buy.btn:hover, .third-slider .actions .buy.btn:hover, .program-item .offer .buy.btn:hover, .program-item .tab-content .about .buy.btn:hover {
   background-color: #fff;
   border: 1px solid #FE6E27;
   color: #FE6E27;
 }
 
-.main .mainSlider .item .offer a:hover, .first-slider a:hover, .second-slider .actions .btn:hover, .third-slider .actions .btn:hover {
+.main .mainSlider .item .offer a:hover, .first-slider a:hover, .second-slider .actions .btn:hover, .third-slider .actions .btn:hover, .program-item .offer .btn:hover, .program-item .tab-content .about .btn:hover {
   background: none;
   border: 1px solid #081B43;
   color: #081B43;
@@ -1765,9 +1765,178 @@ h2 {
   margin-bottom: 36px;
 }
 
+.program-item .main-photo {
+  max-width: 100%;
+}
+
+.program-item .main-photo.mobile {
+  display: none;
+}
+
+.program-item .offer {
+  padding: 20px 0 40px 20px;
+}
+
+.program-item .offer .title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  margin-bottom: 7px;
+}
+
+.program-item .offer .program-rating {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 12px;
+  margin: 18px 0 15px 0;
+}
+
+.program-item .offer .program-rating .rating {
+  gap: 4px;
+}
+
+.program-item .offer .program-rating .rating .star {
+  width: 15px;
+}
+
+.program-item .offer .program-rating .rating .star svg {
+  width: 100%;
+}
+
+.program-item .offer .program-rating > p {
+  font-size: 16px;
+}
+
+.program-item .offer .text {
+  color: #464C4C;
+}
+
+.program-item .offer .btn {
+  margin: 29px 0 52px 0;
+}
+
+.program-item .offer .type .title {
+  color: #000;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+
+.program-item .offer .type .types {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 27px;
+}
+
+.program-item .offer .type .types .item {
+  width: 132px;
+  text-align: center;
+}
+
+.program-item .offer .type .types .item img {
+  max-width: 100%;
+  margin-bottom: 3px;
+}
+
+.program-item .offer .type .types .item p {
+  color: #000;
+}
+
+.program-item .nav-tabs {
+  border: 0;
+  gap: 40px;
+  margin-bottom: 36px;
+}
+
+.program-item .nav-tabs .nav-item .nav-link {
+  border: 0;
+  background-color: #fff;
+  margin: 0;
+  padding: 0 0 4px 0;
+  color: #081B43;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.program-item .nav-tabs .nav-item .nav-link.active {
+  color: #FE6E27;
+  border-bottom: 2px solid #FE6E27;
+}
+
+.program-item .tab-content .about {
+  color: #464C4C;
+}
+
+.program-item .tab-content .about .desc {
+  margin-bottom: 34px;
+}
+
+.program-item .tab-content .about .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.program-item .tab-content .about .item .number {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 42px;
+  margin-left: -41px;
+}
+
+.program-item .tab-content .about .item .content .title {
+  margin-top: 7px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 28px;
+  margin-bottom: 10px;
+}
+
+.program-item .tab-content .about .btn {
+  margin: 12px auto 12px auto;
+}
+
+.program-item .desc-bottom {
+  color: #464C4C;
+  margin-top: 50px;
+}
+
 @media screen and (max-width: 1200px) {
   .program-filter .program-filter-wrapper {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .program-item .main-photo.desktop {
+    display: none;
+  }
+  .program-item .main-photo.mobile {
+    display: block;
+    margin: 0 auto;
+    max-height: 300px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .program-item .tab-content .about .item {
+    gap: 10px;
+  }
+  .program-item .tab-content .about .item .number {
+    margin-left: 0;
+    font-size: 18px;
+    line-height: 21px;
+  }
+  .program-item .tab-content .about .item .content .title {
+    font-size: 18px;
+    line-height: 21px;
+    margin-top: 0;
   }
 }
 
