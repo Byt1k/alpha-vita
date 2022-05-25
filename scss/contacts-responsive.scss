@@ -1,0 +1,50 @@
+@media screen and (max-width: 992px) {
+    .contacts-page {
+        .form {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .contacts-page {
+        h3 {
+            margin-left: 0;
+        }
+
+        .item {
+            padding: 20px 0;
+
+            .title {
+                font-size: 18px;
+                line-height: 21px;
+            }
+
+            .content {
+                > div {
+                    width: 100%;
+                }
+
+                padding: 0;
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+
+        .map {
+            margin-bottom: 36px;
+        }
+
+        .contacts-logo {
+            display: none;
+        }
+
+        .form {
+            margin-bottom: 50px;
+
+            .send {
+                margin: 0 auto;
+            }
+        }
+    }
+}
