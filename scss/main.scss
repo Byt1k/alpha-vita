@@ -1616,70 +1616,100 @@ h2 {
 
 // 
 
-@media screen and (max-width: 1200px) {
-    .program-filter {
-        .program-filter-wrapper {
-            width: 100%;
-        }
+// Контакты
+
+.contacts-page {
+    h3 {
+        font-size: 40px;
+        line-height: 47px;
+        color: #464C4C;
+        margin-left: 18px;
+        padding: 17px 0;
     }
-}
 
-@media screen and (max-width: 992px) {
-    .program-item {
-        .main-photo {
-            &.desktop {
-                display: none;
-            }
+    .item {
+        padding: 30px 18px;
+        border-bottom: 1px solid #E6E7E9;
 
-            &.mobile {
-                display: block;
-                margin: 0 auto;
-                max-height: 300px;
-                object-fit: cover;
-            }
+        .title {
+            font-size: 24px;
+            line-height: 28px;
+            margin-bottom: 27px;
         }
 
-        .tab-content .about .item {
-            gap: 10px;
+        .content {
+            display: flex;
+            color: #464C4C;
+            padding: 0 20px;
+            gap: 50px;
 
-            .number {
-                margin-left: 0;
-                font-size: 18px;
-                line-height: 21px;
-            }
+            > div {
+                width: 412px;
+                p {
+                    line-height: 18px;
 
-            .content .title {
-                font-size: 18px;
-                line-height: 21px;
-                margin-top: 0;
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .program-filter {
-        .program-filter-wrapper {
-            .program-filter-row {
-                flex-wrap: wrap;
-                max-width: 100%;
-                justify-content: flex-start;
-                gap: 10px;
-                
-                .title {
-                    width: 100%;
+                    a {
+                        color: inherit;
+                        font-size: inherit;
+                        line-height: inherit;
+                    }
                 }
             }
         }
     }
 
-    .programs-catalog {
-        padding: 54px 0 0 0 0;
+    .map {
+        margin: 44px 0 90px 0;
+    }
+
+    .contacts-logo {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 90px;
+        max-width: 100%;
+    }
+
+    .form {
+        width: 420px;
+
+        .field {
+            margin-bottom: 15px;
+
+            input, textarea {
+                width: 100%;
+                height: 36px;
+                background: #FFFFFF;
+                border: 0.5px solid #B0B0B0;
+                padding: 0 10px;
+                margin-top: 3px;
+
+                &::placeholder {
+                    color: #E5E5E5;
+                }
+            }
+
+            textarea {
+                padding: 5px 10px;
+                height: 146px;
+                resize: none;
+            }
+        }
+
+        .send {
+            @extend %mainBtn;
+            width: 148px;
+            height: 43px;
+            margin-left: auto;
+            margin-top: 5px;
+        }
     }
 }
 
+// 
 
 
+@import 'contacts-responsive';
+@import 'programs-responsive'; 
 @import 'responsive-shop';
 @import 'responsive';
 

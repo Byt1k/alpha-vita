@@ -117,7 +117,7 @@ a, button {
   transition: all .3s ease;
 }
 
-.main .mainSlider .item .offer a, .first-slider a, .second-slider .actions .btn, .third-slider .actions .btn, .program-item .offer .btn, .program-item .tab-content .about .btn {
+.main .mainSlider .item .offer a, .first-slider a, .second-slider .actions .btn, .third-slider .actions .btn, .program-item .offer .btn, .program-item .tab-content .about .btn, .contacts-page .form .send {
   font-size: 14px;
   color: #fff;
   display: -webkit-box;
@@ -137,13 +137,13 @@ a, button {
   text-transform: uppercase;
 }
 
-.main .mainSlider .item .offer a.buy:hover, .first-slider a.buy:hover, .second-slider .actions .buy.btn:hover, .third-slider .actions .buy.btn:hover, .program-item .offer .buy.btn:hover, .program-item .tab-content .about .buy.btn:hover {
+.main .mainSlider .item .offer a.buy:hover, .first-slider a.buy:hover, .second-slider .actions .buy.btn:hover, .third-slider .actions .buy.btn:hover, .program-item .offer .buy.btn:hover, .program-item .tab-content .about .buy.btn:hover, .contacts-page .form .buy.send:hover {
   background-color: #fff;
   border: 1px solid #FE6E27;
   color: #FE6E27;
 }
 
-.main .mainSlider .item .offer a:hover, .first-slider a:hover, .second-slider .actions .btn:hover, .third-slider .actions .btn:hover, .program-item .offer .btn:hover, .program-item .tab-content .about .btn:hover {
+.main .mainSlider .item .offer a:hover, .first-slider a:hover, .second-slider .actions .btn:hover, .third-slider .actions .btn:hover, .program-item .offer .btn:hover, .program-item .tab-content .about .btn:hover, .contacts-page .form .send:hover {
   background: none;
   border: 1px solid #081B43;
   color: #081B43;
@@ -1906,6 +1906,147 @@ h2 {
 .program-item .desc-bottom {
   color: #464C4C;
   margin-top: 50px;
+}
+
+.contacts-page h3 {
+  font-size: 40px;
+  line-height: 47px;
+  color: #464C4C;
+  margin-left: 18px;
+  padding: 17px 0;
+}
+
+.contacts-page .item {
+  padding: 30px 18px;
+  border-bottom: 1px solid #E6E7E9;
+}
+
+.contacts-page .item .title {
+  font-size: 24px;
+  line-height: 28px;
+  margin-bottom: 27px;
+}
+
+.contacts-page .item .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #464C4C;
+  padding: 0 20px;
+  gap: 50px;
+}
+
+.contacts-page .item .content > div {
+  width: 412px;
+}
+
+.contacts-page .item .content > div p {
+  line-height: 18px;
+}
+
+.contacts-page .item .content > div p a {
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.contacts-page .map {
+  margin: 44px 0 90px 0;
+}
+
+.contacts-page .contacts-logo {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 90px;
+  max-width: 100%;
+}
+
+.contacts-page .form {
+  width: 420px;
+}
+
+.contacts-page .form .field {
+  margin-bottom: 15px;
+}
+
+.contacts-page .form .field input, .contacts-page .form .field textarea {
+  width: 100%;
+  height: 36px;
+  background: #FFFFFF;
+  border: 0.5px solid #B0B0B0;
+  padding: 0 10px;
+  margin-top: 3px;
+}
+
+.contacts-page .form .field input::-webkit-input-placeholder, .contacts-page .form .field textarea::-webkit-input-placeholder {
+  color: #E5E5E5;
+}
+
+.contacts-page .form .field input:-ms-input-placeholder, .contacts-page .form .field textarea:-ms-input-placeholder {
+  color: #E5E5E5;
+}
+
+.contacts-page .form .field input::-ms-input-placeholder, .contacts-page .form .field textarea::-ms-input-placeholder {
+  color: #E5E5E5;
+}
+
+.contacts-page .form .field input::placeholder, .contacts-page .form .field textarea::placeholder {
+  color: #E5E5E5;
+}
+
+.contacts-page .form .field textarea {
+  padding: 5px 10px;
+  height: 146px;
+  resize: none;
+}
+
+.contacts-page .form .send {
+  width: 148px;
+  height: 43px;
+  margin-left: auto;
+  margin-top: 5px;
+}
+
+@media screen and (max-width: 992px) {
+  .contacts-page .form {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .contacts-page h3 {
+    margin-left: 0;
+  }
+  .contacts-page .item {
+    padding: 20px 0;
+  }
+  .contacts-page .item .title {
+    font-size: 18px;
+    line-height: 21px;
+  }
+  .contacts-page .item .content {
+    padding: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 15px;
+  }
+  .contacts-page .item .content > div {
+    width: 100%;
+  }
+  .contacts-page .map {
+    margin-bottom: 36px;
+  }
+  .contacts-page .contacts-logo {
+    display: none;
+  }
+  .contacts-page .form {
+    margin-bottom: 50px;
+  }
+  .contacts-page .form .send {
+    margin: 0 auto;
+  }
 }
 
 @media screen and (max-width: 1200px) {
