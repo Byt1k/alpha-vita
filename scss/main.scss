@@ -96,6 +96,37 @@ a, button {
     }
 }
 
+%checkbox {
+    position: relative;
+    
+    input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    label.check {
+        width: 18px;
+        height: 18px;
+        background: #FFFFFF;
+        border: 0.3px solid #464C4C;
+        border-radius: 2px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        span {
+            width: 14px;
+            height: 14px;
+            border-radius: 1px;
+            background-color: #fff;
+        }
+    }
+
+    input:checked + label.check span{
+        background: #464C4C;   
+    }
+}
 
 .top-nav {
     background-color: $secondaryColor;
@@ -1384,6 +1415,86 @@ h2 {
 }
 
 // 
+
+// Программы
+
+.program-filter {
+    .program-filter-wrapper {
+        width: 1020px;
+        margin: 0 auto;
+        
+        .program-filter-row {
+            margin-top: 25px;
+            width: 540px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+    
+            .title {
+                font-size: 16px;
+                font-weight: 600;
+                color: #464C4C
+            }
+    
+            .item {
+                @extend %checkbox;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                label {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+.programs-catalog {
+    .catalogWrapper {
+        margin-bottom: 20px;
+    }
+}
+
+.programs-desc {
+    p {
+        color: #B0B0B0;
+        margin-bottom: 36px;
+    }
+}
+
+//
+
+@media screen and (max-width: 1200px) {
+    .program-filter {
+        .program-filter-wrapper {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .program-filter {
+        .program-filter-wrapper {
+            .program-filter-row {
+                flex-wrap: wrap;
+                max-width: 100%;
+                justify-content: flex-start;
+                gap: 10px;
+                
+                .title {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .programs-catalog {
+        padding: 54px 0 0 0 0;
+    }
+}
+
+
 
 @import 'responsive-shop';
 @import 'responsive';
