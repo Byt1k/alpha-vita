@@ -1,0 +1,41 @@
+@media screen and (max-width: 992px) {
+  .contacts-page .form {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .contacts-page h3 {
+    margin-left: 0;
+  }
+  .contacts-page .item {
+    padding: 20px 0;
+  }
+  .contacts-page .item .title {
+    font-size: 18px;
+    line-height: 21px;
+  }
+  .contacts-page .item .content {
+    padding: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 15px;
+  }
+  .contacts-page .item .content > div {
+    width: 100%;
+  }
+  .contacts-page .map {
+    margin-bottom: 36px;
+  }
+  .contacts-page .contacts-logo {
+    display: none;
+  }
+  .contacts-page .form {
+    margin-bottom: 50px;
+  }
+  .contacts-page .form .send {
+    margin: 0 auto;
+  }
+}

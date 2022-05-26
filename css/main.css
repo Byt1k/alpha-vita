@@ -2180,6 +2180,196 @@ h2 {
   margin-bottom: 20px;
 }
 
+.certificates {
+  padding: 30px 0 190px 0;
+  min-height: 60vh;
+}
+
+.certificates .certificates-wrapper {
+  height: 330px;
+}
+
+.certificates .certificates-wrapper .owl-stage {
+  padding-top: 50px;
+}
+
+.certificates .certificates-wrapper .owl-item .item {
+  width: 165px;
+  height: 230px;
+  margin: 0 auto;
+  margin-top: 50px;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.certificates .certificates-wrapper .owl-item .item img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.certificates .certificates-wrapper .owl-item .item .zoom {
+  display: none;
+  cursor: pointer;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 43px;
+  height: 43px;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  position: absolute;
+  right: -16px;
+  top: -44px;
+}
+
+.certificates .certificates-wrapper .owl-item .item .zoom img {
+  max-width: 24px;
+  height: auto;
+}
+
+.certificates .certificates-wrapper .owl-item.center .item {
+  margin-top: 0;
+  width: 230px;
+  height: 330px;
+  position: relative;
+}
+
+.certificates .certificates-wrapper .owl-item.center .item .zoom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.certificates .certificates-wrapper .owl-nav {
+  position: absolute;
+  top: 180px;
+  left: -60px;
+  z-index: 100;
+}
+
+/* картинка на странице */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.overlay .magnify {
+  display: block;
+  position: relative;
+  width: auto;
+  height: 70vh;
+  background-color: #fff;
+}
+
+.overlay .magnify img {
+  height: 100%;
+}
+
+.overlay .magnify .close-popup {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 43px;
+  height: 43px;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  position: absolute;
+  top: -50px;
+  right: -16px;
+}
+
+.overlay .magnify .close-popup:after {
+  content: url(../img/decrease.svg);
+}
+
+@media screen and (max-width: 992px) {
+  .certificates {
+    min-height: 90vh;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .certificates {
+    padding-bottom: 0px;
+    min-height: auto;
+  }
+  .certificates .certificates-wrapper {
+    height: auto;
+  }
+  .certificates .certificates-wrapper .owl-stage-outer .owl-stage {
+    width: 100% !important;
+    -webkit-transform: none !important;
+            transform: none !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .certificates .certificates-wrapper .owl-stage-outer .owl-stage .owl-item {
+    width: 70% !important;
+    height: auto;
+  }
+  .certificates .certificates-wrapper .owl-stage-outer .owl-stage .owl-item .item {
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+    margin-bottom: 80px;
+  }
+  .certificates .certificates-wrapper .owl-stage-outer .owl-stage .owl-item .item img {
+    width: 100%;
+    height: auto;
+  }
+  .certificates .certificates-wrapper .owl-stage-outer .owl-stage .owl-item .item .zoom {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .overlay .magnify {
+    height: auto;
+    width: 80vw;
+  }
+  .overlay .magnify img {
+    height: auto;
+    width: 100%;
+  }
+}
+
 @media (min-width: 1200px) {
   .single .container {
     width: 1050px;
