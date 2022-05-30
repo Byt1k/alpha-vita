@@ -149,3 +149,58 @@ $(window).resize(function(){
 
 
 
+$('.product-photos-slider').owlCarousel({
+    loop: false,
+    margin: 10,
+    dots: true,
+    items: 1
+})
+
+
+// Cчётчик в карточке товара
+
+const productCounter = document.querySelector('.product-item .info .count .counter');
+
+const productIncrement = productCounter.querySelector('.plus');
+const productDecrement = productCounter.querySelector('.minus');
+let productCount = productCounter.querySelector('.value');
+
+productDecrement.addEventListener('click', () => {
+    if (+productCount.innerHTML > 1) {
+        productCount.innerHTML = +productCount.innerHTML - 1;
+    }
+})
+
+productIncrement.addEventListener('click', () => {
+    productCount.innerHTML = +productCount.innerHTML + 1;
+    
+})
+
+
+// Зум фото товара 
+
+// const productPhotosZoom = document.querySelector('.product-item .photos .zoom')
+
+// productPhotosZoom.addEventListener('click', (e) => {
+//     const photosContainer = e.target.closest('.photos');
+//     photosContainer.classList.add('active');
+//     const photosSlider = photosContainer.querySelector('.product-photos-slider');
+//     photosSlider.className = 'owl-carousel owl-theme owl-loaded owl-drag product-photos-slider-active';
+
+//     const body = document.querySelector('body');
+
+//     body.style.overflowY = 'hidden';
+        
+    // body.onclick = (e) => {
+    //     console.log(e.target);
+    //     if (e.target !== productPhotosZoom 
+    //         && e.target !== productPhotosZoom.querySelector('img') 
+    //         && e.target !== photosContainer.querySelector('.product-photos-slider .owl-dots .owl-dot span') 
+    //         // && e.target. !== '.product-photos-slider .zoom'
+    //     ) {
+    //         photosContainer.classList.remove('active');
+    //         body.style.overflowY = 'visible';
+    //     }
+    // }
+// })
+

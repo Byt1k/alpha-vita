@@ -6,6 +6,24 @@
             padding-bottom: 12px;
         }
     }
+
+    // Карточка товара 
+
+    .product-item {
+        .info {
+            .action {
+                width: 100%;
+                padding: 17px 23px;
+                justify-content: space-between;
+
+                .count {
+                    span {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -68,6 +86,31 @@
                 }
             }
 
+        }
+    }
+
+
+    // Карточка товара 
+
+    .product-item {
+        padding-top: 70px;
+
+        .info {
+            .title {
+                position: absolute;
+                top: 20px;
+                left: 15px;
+            }
+
+            .sale {
+                position: absolute;
+                top: 70px;
+                right: 15px;
+            }
+
+            .reviews {
+                margin-top: 20px;
+            }
         }
     }
 }

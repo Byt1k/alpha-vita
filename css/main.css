@@ -117,7 +117,7 @@ a, button {
   transition: all .3s ease;
 }
 
-.main .mainSlider .item .offer a, .first-slider a, .second-slider .actions .btn, .third-slider .actions .btn, .program-item .offer .btn, .program-item .tab-content .about .btn, .contacts-page .form .send {
+.main .mainSlider .item .offer a, .first-slider a, .second-slider .actions .btn, .third-slider .actions .btn, .program-item .offer .btn, .program-item .tab-content .about .btn, .contacts-page .form .send, .product-item .info .action .btn {
   font-size: 14px;
   color: #fff;
   display: -webkit-box;
@@ -137,13 +137,13 @@ a, button {
   text-transform: uppercase;
 }
 
-.main .mainSlider .item .offer a.buy:hover, .first-slider a.buy:hover, .second-slider .actions .buy.btn:hover, .third-slider .actions .buy.btn:hover, .program-item .offer .buy.btn:hover, .program-item .tab-content .about .buy.btn:hover, .contacts-page .form .buy.send:hover {
+.main .mainSlider .item .offer a.buy:hover, .first-slider a.buy:hover, .second-slider .actions .buy.btn:hover, .third-slider .actions .buy.btn:hover, .program-item .offer .buy.btn:hover, .program-item .tab-content .about .buy.btn:hover, .contacts-page .form .buy.send:hover, .product-item .info .action .buy.btn:hover {
   background-color: #fff;
   border: 1px solid #FE6E27;
   color: #FE6E27;
 }
 
-.main .mainSlider .item .offer a:hover, .first-slider a:hover, .second-slider .actions .btn:hover, .third-slider .actions .btn:hover, .program-item .offer .btn:hover, .program-item .tab-content .about .btn:hover, .contacts-page .form .send:hover {
+.main .mainSlider .item .offer a:hover, .first-slider a:hover, .second-slider .actions .btn:hover, .third-slider .actions .btn:hover, .program-item .offer .btn:hover, .program-item .tab-content .about .btn:hover, .contacts-page .form .send:hover, .product-item .info .action .btn:hover {
   background: none;
   border: 1px solid #081B43;
   color: #081B43;
@@ -2312,6 +2312,281 @@ h2 {
   content: url(../img/decrease.svg);
 }
 
+.product-item {
+  padding: 35px 0 46px 0;
+  position: relative;
+}
+
+.product-item .photos {
+  position: relative;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.product-item .photos img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.product-item .photos .zoom {
+  position: absolute;
+  z-index: 90;
+  top: 19px;
+  right: 15px;
+  width: 43px;
+  height: 43px;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.product-item .photos.active {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.product-item .photos.active .zoom {
+  display: none;
+}
+
+.product-item .photos.active .owl-dots .owl-dot:not(.active) span {
+  background-color: #fff;
+}
+
+.product-item .photos.active .owl-stage .owl-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.product-item .photos.active .owl-stage .owl-item .item img {
+  background-color: #fff;
+}
+
+.product-item .info {
+  padding-top: 10px;
+}
+
+.product-item .info .sale {
+  width: 56px;
+  height: 22px;
+  border-radius: 2px;
+  background: #78BE20;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  font-weight: 600;
+}
+
+.product-item .info .title {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28px;
+  margin: 9px 0 6px 0;
+}
+
+.product-item .info .reviews {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 12px;
+}
+
+.product-item .info .reviews .rating {
+  gap: 5px;
+}
+
+.product-item .info .reviews .rating .star {
+  width: 15px;
+}
+
+.product-item .info .reviews .count {
+  color: #B0B0B0;
+}
+
+.product-item .info .price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  margin: 20px 0 12px 0;
+}
+
+.product-item .info .price .current {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.product-item .info .price .old {
+  color: #C4C4C4;
+  text-decoration: line-through;
+}
+
+.product-item .info .text {
+  font-size: 14px;
+  line-height: 21px;
+  color: #B0B0B0;
+}
+
+.product-item .info .action {
+  margin: 21px 0 33px 0;
+  background: #FFFFFF;
+  border: 0.5px solid #C4C4C4;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 21px;
+  padding: 17px 22px 18px 34px;
+  width: 425px;
+}
+
+.product-item .info .action .count {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 21px;
+}
+
+.product-item .info .action .count span {
+  color: #848484;
+}
+
+.product-item .info .action .count .counter {
+  width: 100px;
+  height: 43px;
+  background: #FFFFFF;
+  border: 0.5px solid #C4C4C4;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 5px;
+}
+
+.product-item .info .action .count .counter svg {
+  cursor: pointer;
+}
+
+.product-item .info .action .count .counter svg:hover path {
+  fill: #FE6E27;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.product-item .info .action .count .counter .value {
+  color: #848484;
+  text-align: center;
+}
+
+.product-item .info .action .btn {
+  width: 150px;
+  height: 43px;
+}
+
+.product-item .info .desc p {
+  line-height: 21px;
+  color: #B0B0B0;
+}
+
+.product-item .info .desc p span {
+  color: #464C4C;
+}
+
+.product-item .nav-tabs {
+  margin-top: 60px;
+  border: 0;
+  gap: 40px;
+  margin-bottom: 36px;
+}
+
+.product-item .nav-tabs .nav-item .nav-link {
+  border: 0;
+  background-color: #fff;
+  margin: 0;
+  padding: 0 0 4px 0;
+  color: #081B43;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.product-item .nav-tabs .nav-item .nav-link.active {
+  color: #FE6E27;
+  border-bottom: 2px solid #FE6E27;
+}
+
+.product-item .tab-content p {
+  margin-bottom: 20px;
+}
+
+.product-item .tab-content p span {
+  line-height: 16px;
+  color: #464C4C;
+  display: block;
+}
+
+.product-item .tab-content p span.title {
+  font-weight: 700;
+}
+
 @media screen and (max-width: 992px) {
   .certificates {
     min-height: 90vh;
@@ -2545,6 +2820,16 @@ h2 {
   .shop-categories .categoriesWrapper {
     padding-bottom: 12px;
   }
+  .product-item .info .action {
+    width: 100%;
+    padding: 17px 23px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .product-item .info .action .count span {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -2583,6 +2868,22 @@ h2 {
   }
   .subscribe .subscribeWrapper .form input {
     width: 100%;
+  }
+  .product-item {
+    padding-top: 70px;
+  }
+  .product-item .info .title {
+    position: absolute;
+    top: 20px;
+    left: 15px;
+  }
+  .product-item .info .sale {
+    position: absolute;
+    top: 70px;
+    right: 15px;
+  }
+  .product-item .info .reviews {
+    margin-top: 20px;
   }
 }
 

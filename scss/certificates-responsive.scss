@@ -1,0 +1,59 @@
+@media screen and (max-width: 992px) {
+    .certificates {
+        min-height: 90vh;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .certificates {
+        padding-bottom: 0px;
+        min-height: auto;
+
+        .certificates-wrapper {
+            height: auto;
+
+            .owl-stage-outer {
+                .owl-stage {
+                    width: 100% !important;
+                    transform: none !important;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    .owl-item {
+                        width: 70% !important;
+                        height: auto;
+
+                        .item {
+                            width: 100%;
+                            height: auto;
+                            margin-top: 0;
+                            margin-bottom: 80px;
+                            
+                            img {
+                                width: 100%;
+                                height: auto;
+                            }
+
+                            .zoom {
+                                display: flex;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .overlay {
+        .magnify {
+            height: auto;
+            width: 80vw;
+            
+            img {
+                height: auto;
+                width: 100%;
+            }
+        }
+    }
+}
