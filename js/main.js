@@ -159,21 +159,23 @@ $('.product-photos-slider').owlCarousel({
 
 // Cчётчик в карточке товара
 
-const productCounter = document.querySelector('.product-item .info .count .counter');
+const productCounter = document.querySelectorAll('.counter');
 
-const productIncrement = productCounter.querySelector('.plus');
-const productDecrement = productCounter.querySelector('.minus');
-let productCount = productCounter.querySelector('.value');
+productCounter.forEach(counter => {
+    const productIncrement = counter.querySelector('.plus');
+    const productDecrement = counter.querySelector('.minus');
+    let productCount = counter.querySelector('.value');
 
-productDecrement.addEventListener('click', () => {
-    if (+productCount.innerHTML > 1) {
-        productCount.innerHTML = +productCount.innerHTML - 1;
-    }
-})
+    productDecrement.addEventListener('click', () => {
+        if (+productCount.innerHTML > 1) {
+            productCount.innerHTML = +productCount.innerHTML - 1;
+        }
+    })
 
-productIncrement.addEventListener('click', () => {
-    productCount.innerHTML = +productCount.innerHTML + 1;
-    
+    productIncrement.addEventListener('click', () => {
+        productCount.innerHTML = +productCount.innerHTML + 1;
+        
+    })
 })
 
 

@@ -1,0 +1,45 @@
+@media screen and (max-width: 992px) {
+    .product-cart {
+        .cart-warning {
+            margin: 30px 0 20px 0;
+        }
+
+        .count {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    .product-cart {
+        .item {
+            justify-content: flex-start;
+            .info {
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+
+                .title {
+                    margin-top: -50px;
+
+                    .new {
+                        position: absolute;
+                        top: 14px;
+                        left: 60px;
+                    }
+                }
+
+                .price {
+                    margin-top: -75px;
+                }
+
+                .counter {
+                    margin: 0;
+                    margin-top: 40px;
+                }
+            }
+        }
+    }
+
+}
