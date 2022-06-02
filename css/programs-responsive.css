@@ -1,0 +1,49 @@
+@media screen and (max-width: 1200px) {
+  .program-filter .program-filter-wrapper {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .program-item .main-photo.desktop {
+    display: none;
+  }
+  .program-item .main-photo.mobile {
+    display: block;
+    margin: 0 auto;
+    max-height: 300px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .program-item .tab-content .about .item {
+    gap: 10px;
+  }
+  .program-item .tab-content .about .item .number {
+    margin-left: 0;
+    font-size: 18px;
+    line-height: 21px;
+  }
+  .program-item .tab-content .about .item .content .title {
+    font-size: 18px;
+    line-height: 21px;
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .program-filter .program-filter-wrapper .program-filter-row {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    max-width: 100%;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    gap: 10px;
+  }
+  .program-filter .program-filter-wrapper .program-filter-row .title {
+    width: 100%;
+  }
+  .programs-catalog {
+    padding: 54px 0 0 0 0;
+  }
+}

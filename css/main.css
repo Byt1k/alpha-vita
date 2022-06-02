@@ -2773,6 +2773,46 @@ h2 {
   height: 43px;
 }
 
+.politics {
+  padding: 15px 0 90px 0;
+}
+
+.politics .item {
+  border-bottom: 1px solid #E6E7E9;
+  padding: 30px 0;
+}
+
+.politics .item .title {
+  font-size: 24px;
+  line-height: 28px;
+  margin-bottom: 12px;
+}
+
+.politics .item .accordion .accordion-item {
+  background: #FFFFFF;
+  border: 0.5px solid #C4C4C4;
+  margin-bottom: 12px;
+  border-radius: 4px !important;
+}
+
+.politics .item .accordion .accordion-item .accordion-button {
+  border-radius: 4px !important;
+  font-size: 16px;
+  color: #848484;
+  border: 0;
+}
+
+.politics .item .accordion .accordion-item .accordion-button:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.politics .item .accordion .accordion-item .accordion-button:not(.collapsed) {
+  background-color: #fff;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 @media screen and (max-width: 992px) {
   .product-cart .cart-warning {
     margin: 30px 0 20px 0;

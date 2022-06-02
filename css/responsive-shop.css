@@ -1,0 +1,73 @@
+@media screen and (max-width: 992px) {
+  .shop-categories {
+    padding-top: 12px;
+  }
+  .shop-categories .categoriesWrapper {
+    padding-bottom: 12px;
+  }
+  .product-item .info .action {
+    width: 100%;
+    padding: 17px 23px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .product-item .info .action .count span {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .filter .filterWrapper .left p {
+    display: none;
+  }
+  .filter .filterWrapper .right .sort {
+    width: 150px;
+  }
+  .filter .filterWrapper .right .sort select {
+    width: 100%;
+  }
+  .shop .item .bottom .addToCart {
+    background-color: #FE6E27;
+    padding: 10px;
+  }
+  .shop .item .bottom .addToCart span {
+    color: #fff;
+    font-size: 12px;
+  }
+  .shop .item .bottom .addToCart .icon {
+    display: none;
+  }
+  .subscribe .subscribeWrapper .title {
+    text-align: center;
+  }
+  .subscribe .subscribeWrapper span {
+    width: 100%;
+  }
+  .subscribe .subscribeWrapper .form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  .subscribe .subscribeWrapper .form input {
+    width: 100%;
+  }
+  .product-item {
+    padding-top: 70px;
+  }
+  .product-item .info .title {
+    position: absolute;
+    top: 20px;
+    left: 15px;
+  }
+  .product-item .info .sale {
+    position: absolute;
+    top: 70px;
+    right: 15px;
+  }
+  .product-item .info .reviews {
+    margin-top: 20px;
+  }
+}
