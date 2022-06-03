@@ -206,3 +206,36 @@ productCounter.forEach(counter => {
     // }
 // })
 
+
+const programsObj = {
+    loop: true,
+    margin: 15,
+    dots: false,
+    navText: [
+        '<img src="img/carousel-prev.svg" alt="prev" />',
+        '<img src="img/carousel-next.svg" alt="next" />'
+    ],
+    responsive: {
+        0: {
+            nav: false,
+            items: 1.5
+        },
+        768: {
+            nav: false,
+        },
+        992: {
+            nav: false,
+            items: 3
+        },
+        1200: {
+            items: 4,
+            nav: true
+        }
+    }
+
+}
+
+$('.catalogWrapper').owlCarousel(programsObj);
+$('.catalogWrapper-1').owlCarousel(programsObj);
+$('.catalogWrapper-2').owlCarousel(programsObj);
+$('.catalogWrapper-3').owlCarousel(programsObj);

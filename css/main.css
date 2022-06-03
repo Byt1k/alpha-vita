@@ -117,7 +117,7 @@ a, button {
   transition: all .3s ease;
 }
 
-.main .mainSlider .item .offer a, .first-slider a, .second-slider .actions .btn, .third-slider .actions .btn, .program-item .offer .btn, .program-item .tab-content .about .btn, .contacts-page .form .send, .product-item .info .action .btn, .not-found .to-home {
+.main .mainSlider .item .offer a, .first-slider a, .second-slider .actions .btn, .third-slider .actions .btn, .program-item .offer div.d-flex .btn, .program-item .tab-content .about .btn, .contacts-page .form .send, .product-item .info .action .btn, .not-found .to-home {
   font-size: 14px;
   color: #fff;
   display: -webkit-box;
@@ -137,13 +137,13 @@ a, button {
   text-transform: uppercase;
 }
 
-.main .mainSlider .item .offer a.buy:hover, .first-slider a.buy:hover, .second-slider .actions .buy.btn:hover, .third-slider .actions .buy.btn:hover, .program-item .offer .buy.btn:hover, .program-item .tab-content .about .buy.btn:hover, .contacts-page .form .buy.send:hover, .product-item .info .action .buy.btn:hover, .not-found .buy.to-home:hover {
+.main .mainSlider .item .offer a.buy:hover, .first-slider a.buy:hover, .second-slider .actions .buy.btn:hover, .third-slider .actions .buy.btn:hover, .program-item .offer div.d-flex .buy.btn:hover, .program-item .tab-content .about .buy.btn:hover, .contacts-page .form .buy.send:hover, .product-item .info .action .buy.btn:hover, .not-found .buy.to-home:hover {
   background-color: #fff;
   border: 1px solid #FE6E27;
   color: #FE6E27;
 }
 
-.main .mainSlider .item .offer a:hover, .first-slider a:hover, .second-slider .actions .btn:hover, .third-slider .actions .btn:hover, .program-item .offer .btn:hover, .program-item .tab-content .about .btn:hover, .contacts-page .form .send:hover, .product-item .info .action .btn:hover, .not-found .to-home:hover {
+.main .mainSlider .item .offer a:hover, .first-slider a:hover, .second-slider .actions .btn:hover, .third-slider .actions .btn:hover, .program-item .offer div.d-flex .btn:hover, .program-item .tab-content .about .btn:hover, .contacts-page .form .send:hover, .product-item .info .action .btn:hover, .not-found .to-home:hover {
   background: none;
   border: 1px solid #081B43;
   color: #081B43;
@@ -664,6 +664,18 @@ h2 {
   margin-bottom: 47px;
 }
 
+.catalog .owl-stage {
+  padding: 10px 0;
+}
+
+.catalog .owl-nav {
+  position: absolute;
+  top: 150px;
+  left: -70px;
+  right: 0;
+  width: 1300px;
+}
+
 .catalog .item {
   width: 100%;
   height: 380px;
@@ -1058,8 +1070,17 @@ h2 {
   margin: 49px auto 0 auto;
 }
 
+.activity {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  margin: 0 auto;
+  z-index: 100;
+}
+
 .activity .activityWrapper {
-  margin-top: 42px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1069,7 +1090,7 @@ h2 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-bottom: 42px;
+  padding: 30px 0;
   border-bottom: 1px solid #081B43;
 }
 
@@ -1114,6 +1135,10 @@ h2 {
 
 .activity .activityWrapper .item:hover .icon svg path {
   fill: #fff;
+}
+
+.footer.main-page {
+  padding-bottom: 120px;
 }
 
 .footer .top {
@@ -1753,24 +1778,25 @@ h2 {
 .program-filter .program-filter-wrapper {
   width: 1020px;
   margin: 0 auto;
-}
-
-.program-filter .program-filter-wrapper .program-filter-row {
-  margin-top: 25px;
-  width: 540px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 25px;
+}
+
+.program-filter .program-filter-wrapper .program-filter-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 10px;
 }
 
 .program-filter .program-filter-wrapper .program-filter-row .title {
-  font-size: 16px;
   font-weight: 600;
   color: #464C4C;
 }
@@ -1782,11 +1808,11 @@ h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 10px;
+  gap: 5px;
 }
 
-.program-filter .program-filter-wrapper .program-filter-row .item label {
-  font-size: 16px;
+.programs-catalog {
+  padding-top: 30px;
 }
 
 .programs-catalog .catalogWrapper {
@@ -1846,10 +1872,21 @@ h2 {
 
 .program-item .offer .text {
   color: #464C4C;
+  margin-bottom: 29px;
 }
 
-.program-item .offer .btn {
-  margin: 29px 0 52px 0;
+.program-item .offer div.d-flex .btn {
+  width: 150px;
+}
+
+.program-item .offer div.d-flex .price {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 23px;
+}
+
+.program-item .offer .type {
+  margin-top: 52px;
 }
 
 .program-item .offer .type .title {
@@ -1878,6 +1915,11 @@ h2 {
 
 .program-item .offer .type .types .item p {
   color: #000;
+}
+
+.program-item .offer .type .types .item .price {
+  color: #464C4C;
+  margin-top: 3px;
 }
 
 .program-item .nav-tabs {
@@ -2041,7 +2083,7 @@ h2 {
 }
 
 .blog {
-  padding: 50px 0 100px 0;
+  padding-bottom: 100px;
 }
 
 .blog .item {
@@ -2180,7 +2222,7 @@ h2 {
 .single .title {
   font-size: 36px;
   line-height: 42px;
-  margin: 30px 0;
+  margin-bottom: 30px;
 }
 
 .single .second-title {
@@ -3071,6 +3113,9 @@ h2 {
 }
 
 @media screen and (max-width: 992px) {
+  .program-filter {
+    margin-top: 30px;
+  }
   .program-item .main-photo.desktop {
     display: none;
   }
