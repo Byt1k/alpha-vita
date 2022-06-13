@@ -3499,3 +3499,196 @@ h2 {
     margin-top: 65px;
   }
 }
+
+.admin-header .top {
+  position: relative;
+  z-index: 2;
+  background: url(../img/admin-header-top-bg.svg) center center/cover;
+  -webkit-box-shadow: 0px 2px 2px rgba(70, 76, 76, 0.5);
+          box-shadow: 0px 2px 2px rgba(70, 76, 76, 0.5);
+}
+
+.admin-header .top .info {
+  height: 23px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.admin-header .top .info .icon {
+  width: 10px;
+}
+
+.admin-header .top .info .text {
+  margin-left: 34px;
+  font-size: 10px;
+  color: #fff;
+}
+
+.admin-header .top .info .close {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.admin-header .bottom {
+  z-index: 1;
+  position: relative;
+  background-color: #2E6FA5;
+  padding: 17px 0 9px 0;
+}
+
+.admin-header .bottom .wrapper {
+  position: relative;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.admin-header .bottom .wrapper .text {
+  margin-right: 32px;
+}
+
+.admin-header .bottom .wrapper select {
+  background-color: inherit;
+  color: #fff;
+}
+
+.admin-header .bottom .wrapper select option {
+  background-color: #2E6FA5;
+  color: #fff;
+}
+
+.admin-header .bottom .wrapper select.country {
+  margin-right: 50px;
+}
+
+.admin-header .bottom .wrapper .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 143px;
+  height: 29px;
+  border-radius: 2px;
+  background: #081B43;
+  color: #fff;
+  margin-left: auto;
+  margin-right: 63px;
+}
+
+.admin-header .bottom .wrapper .close {
+  cursor: pointer;
+}
+
+.admin-header .bottom .wrapper .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: auto;
+  gap: 13px;
+}
+
+.admin-header .bottom .wrapper .burger {
+  cursor: pointer;
+  position: absolute;
+  bottom: 0px;
+  left: -85px;
+}
+
+.admin-header .bottom .col-12:first-child {
+  margin-bottom: 18px;
+}
+
+.sidebar {
+  position: relative;
+}
+
+.sidebar .icons {
+  padding: 12px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 25px;
+}
+
+.sidebar .menu {
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc((100vw - 1180px) / 2);
+  min-height: 100vh;
+  -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar .menu .title {
+  width: 100%;
+  height: 41px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 12px 17px 12px 160px;
+  border-bottom: 0.5px solid #F3F4F6;
+  text-transform: uppercase;
+  color: #2E6FA5;
+  font-weight: 600;
+}
+
+.sidebar .menu .accordion__item .title {
+  position: relative;
+}
+
+.sidebar .menu .accordion__item .title::after {
+  content: url(../img/admin-sidebar-arrow.svg);
+  position: absolute;
+  top: 13px;
+  right: 17px;
+}
+
+.sidebar .menu .accordion__item .title:not(.collapsed) {
+  color: #848484;
+}
+
+.sidebar .menu .accordion__item .accordion-collapse {
+  padding: 5px 10px 5px 160px;
+  border-bottom: 1px solid #F3F4F6;
+}
+
+.sidebar .menu .accordion__item .accordion-collapse li a {
+  font-size: 12px;
+  color: #848484;
+  display: block;
+  margin-bottom: 5px;
+}
