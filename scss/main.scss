@@ -2548,7 +2548,7 @@ h2 {
     .top {
         position: relative;
         z-index: 2;
-        background: url(../img/admin-header-top-bg.svg) center center / cover;
+        background: url(../img/admin-header-top-bg.svg) no-repeat center center / cover;
         box-shadow: 0px 2px 2px rgba(70, 76, 76, 0.5);
 
         .info {
@@ -2644,70 +2644,482 @@ h2 {
 }
 
 
-.sidebar {
+.sidebar-wrapper {
     position: relative;
 
-    .icons {
-        padding: 12px 20px;
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
-    }
-
-    .menu {
-        
-        background-color: #fff;
+    .sidebar {
         position: absolute;
-        top: 0;
-        left: 0;
-        width: calc((100vw - 1180px) / 2);
-        min-height: 100vh;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        
+        .icons {
+            padding: 0 20px;
+    
+            li {
+                height: 41px;
+                display: flex;
+                align-items: center;
 
+                .active {
+                    svg.fill path {
+                        fill: $mainColor;
+                    }
 
-        .title {
-            width: 100%;
-            height: 41px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 12px 17px 12px 160px;
-            border-bottom: 0.5px solid #F3F4F6;
-            text-transform: uppercase;
-            color: #2E6FA5;
-            font-weight: 600;
+                    svg.stroke {
+                        path {
+                            stroke: $mainColor;
+                        }
+
+                        circle {
+                            stroke: $mainColor;
+                        }
+                    }
+                }
+            }
         }
-
-        .accordion__item {
+    
+        .menu {
+            background-color: #fff;
+            position: absolute;
+            top: 0;
+            left: -350px;
+            width: 350px;
+            min-height: 100vh;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            transition: all .3s ease;
+            z-index: 99;
+    
+            &.active {
+                left: 0;
+            }
+    
             .title {
-                position: relative;
-
-                &::after {
-                    content: url(../img/admin-sidebar-arrow.svg);
-                    position: absolute;
-                    top: 13px;
-                    right: 17px;
-                }
-                
-                &:not(.collapsed) {
-                    color: #848484;
+                width: 100%;
+                height: 41px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 12px 17px 12px 160px;
+                border-bottom: 0.5px solid #F3F4F6;
+                text-transform: uppercase;
+                color: #2E6FA5;
+                font-weight: 600;
+            }
+    
+            .accordion__item {
+                .title {
+                    position: relative;
+    
+                    &::after {
+                        content: url(../img/admin-sidebar-arrow.svg);
+                        position: absolute;
+                        top: 13px;
+                        right: 17px;
+                    }
                     
+                    &:not(.collapsed) {
+                        color: #848484;
+                        
+                    }
                 }
-            }
-
-            .accordion-collapse {
-                padding: 5px 10px 5px 160px;
-
-                li a {
-                    font-size: 12px;
-                    color: #848484;
-                    display: block;
-                    margin-bottom: 5px;
+    
+                .accordion-collapse {
+                    padding: 5px 10px 5px 160px;
+    
+                    li a {
+                        font-size: 12px;
+                        color: #848484;
+                        display: block;
+                        margin-bottom: 5px;
+                    }
+                    border-bottom: 1px solid #F3F4F6;
                 }
-                border-bottom: 1px solid #F3F4F6;
+    
             }
-
+    
         }
-
     }
 }
+
+%adminMainBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #86BFD4;
+    border-radius: 2px;
+    color: #fff;
+    font-size: 14px;
+    width: 150px;
+    height: 37px;
+}
+
+%adminSecondaryBtn {
+    width: 150px;
+    height: 37px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.5px solid #B0B0B0;
+    border-radius: 2px;
+    color: #B0B0B0;
+    font-size: 14px;
+}
+
+.admin-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 38px 0 13px 0;
+
+    p {
+        font-size: 16px;
+        color: #464C4C;
+    }
+
+    span {
+        color: #2E6FA5;
+    }
+}
+
+.admin-orders {
+
+    .create-order-btn {
+        @extend %adminMainBtn;
+        margin-bottom: 13px;
+    }
+
+    .orders-table {
+
+        .number {
+            width: 50px;
+            text-align: center;
+        }
+
+        .info {
+            width: 280px;
+        }
+
+        .products {
+            width: 280px;
+        }
+
+        .sum {
+            width: 100px;
+            text-align: center;
+        }
+
+        .total {
+            width: 100px;
+            text-align: center;
+        }
+
+        .status {
+            width: 100px;
+            text-align: center;
+        }
+
+        .orders-table__item {
+            .content {
+                background: #FFFFFF;
+                box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.1);
+                padding: 10px;
+                display: flex;
+                gap: 20px;
+                justify-content: space-between;
+
+                .info {
+                    p {
+                        font-size: 13px;
+                        color: #464C4C;
+
+                        b {
+                            font-weight: 700;
+                        }
+                    }
+                }
+
+                .products {
+                    .item {
+                        display: flex;
+                        align-items: flex-start;
+                        justify-content: space-between;
+                        gap: 15px;
+                        font-size: 13px;
+                    }
+                }
+            }
+
+            &:nth-child(2n-1) {
+                .content {
+                    background: #EBFAFF;
+                }
+            }
+
+            .actions {
+                position: relative;
+                margin: 6px 0 20px 0;
+                display: flex;
+                justify-content: flex-end;
+                gap: 10px;
+
+                .pay-on-sklad {
+                    @extend %adminSecondaryBtn;
+                    width: 143px;
+                }
+
+                .pay-online {
+                    @extend %adminMainBtn;
+                    width: 143px;
+                }
+
+                .pdf, .delete {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 37px;
+                    min-width: 37px;
+                    height: 37px;
+                    background: #FFFFFF;
+                    border: 0.5px solid #B0B0B0;
+                    border-radius: 2px;
+
+                }
+            }
+        }
+
+        
+        .orders-table__title {
+            display: flex;
+            justify-content: space-between;
+            background-color: #2E6FA5;
+            color: #fff;
+            font-weight: 700;
+            padding: 5px 10px;
+            box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 4px 4px 0 0;
+            
+            div {
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1800px) {
+    .sidebar-wrapper {
+        .sidebar {
+            .menu {
+                width: 210px;
+
+                .title {
+                    padding-left: 17px;
+                }
+
+                .accordion__item {
+                    .accordion-collapse {
+                        padding-left: 17px;
+                    }
+                }
+            }              
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .admin-header .top .info .text {
+        margin-left: 12px;
+    }
+
+    .sidebar-wrapper {
+        .sidebar {
+            .icons {
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .admin-header {
+        .top {
+            padding: 10px 0;
+
+            .info {
+                height: auto;
+                align-items: flex-start;
+
+                .text {
+                    margin-top: -3px;
+                    font-size: 14px;
+                    margin-right: 10px;
+                }
+            }
+        }
+
+        .bottom {
+            .wrapper {
+                .text {
+                    white-space: nowrap;
+                    font-weight: 400;
+                    margin-right: 20px;
+                }
+
+                .btn {
+                    white-space: nowrap;
+                    margin-right: 10px;
+                }
+
+                .burger {
+                    position: relative;
+                    left: 0;
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+
+    .orders-table {
+        .orders-table__title {
+            display: none !important;
+        }
+
+        .orders-table__item {
+            .content {
+                flex-direction: column;
+                gap: 10px !important;
+
+                > div {
+                    width: 100% !important;
+                    text-align: left;
+                    position: relative;
+                    padding: 5px 0;
+
+                    &:not(.status) {
+                        border-bottom: 1px solid #EEEFF1;
+                    }
+
+                    &.number {
+                        border-bottom: none;
+                    }
+
+                    &::before {
+                        position: absolute;
+                        right: 0;
+                        top: -5px;
+                        color: #86BFD4;
+                        font-size: 13px;
+                        font-weight: 500;
+                    }
+                }
+
+                .info {
+                    margin-top: -20px;
+                }
+
+                .products {
+                    padding-top: 15px; 
+                    
+                    &::before {
+                        content: 'Товары';
+                    }
+                }
+
+                .sum {
+                    padding-top: 15px; 
+                    
+                    &::before {
+                        content: 'Сумма заказа';
+                    }
+                }
+
+                .total {
+                    padding-top: 15px; 
+                    
+                    &::before {
+                        content: 'К оплате';
+                    }
+                }
+
+                .status {
+                    padding-top: 15px; 
+                    
+                    &::before {
+                        content: 'Статус';
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .admin-header {
+        .top {
+            // height: 100px;
+        }
+        .bottom {
+            .wrapper {
+                justify-content: flex-start;
+                align-items: flex-start;
+                flex-wrap: wrap;
+
+                .close {
+                    position: absolute;
+                    top: 7px;
+                    right: 0;
+                }
+
+                .text {
+                    margin-bottom: 10px;
+                }
+
+                .btn {
+                    margin: 10px auto;
+                }
+            
+                select {
+                    margin-left: -3px;
+                    font-size: 13px;
+                }
+
+                .burger {
+                    margin-right: 15px;
+                }
+
+                .country {
+                    margin-right: 10px !important;
+                }
+
+                .icons {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .admin-orders {
+        .orders-table {
+            .orders-table__item {
+                .actions {
+                    padding-top: 45px;
+
+                    .pay-on-sklad {
+                        width: 100%;
+                    }
+                    
+                    .pay-online {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// .admin-title {
+    //     span {
+    //         display: none;
+    //     }
+    // }

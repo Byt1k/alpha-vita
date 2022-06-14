@@ -3503,7 +3503,7 @@ h2 {
 .admin-header .top {
   position: relative;
   z-index: 2;
-  background: url(../img/admin-header-top-bg.svg) center center/cover;
+  background: url(../img/admin-header-top-bg.svg) no-repeat center center/cover;
   -webkit-box-shadow: 0px 2px 2px rgba(70, 76, 76, 0.5);
           box-shadow: 0px 2px 2px rgba(70, 76, 76, 0.5);
 }
@@ -3620,34 +3620,59 @@ h2 {
   margin-bottom: 18px;
 }
 
-.sidebar {
+.sidebar-wrapper {
   position: relative;
 }
 
-.sidebar .icons {
-  padding: 12px 20px;
+.sidebar-wrapper .sidebar {
+  position: absolute;
+}
+
+.sidebar-wrapper .sidebar .icons {
+  padding: 0 20px;
+}
+
+.sidebar-wrapper .sidebar .icons li {
+  height: 41px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 25px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.sidebar .menu {
+.sidebar-wrapper .sidebar .icons li .active svg.fill path {
+  fill: #FE6E27;
+}
+
+.sidebar-wrapper .sidebar .icons li .active svg.stroke path {
+  stroke: #FE6E27;
+}
+
+.sidebar-wrapper .sidebar .icons li .active svg.stroke circle {
+  stroke: #FE6E27;
+}
+
+.sidebar-wrapper .sidebar .menu {
   background-color: #fff;
   position: absolute;
   top: 0;
-  left: 0;
-  width: calc((100vw - 1180px) / 2);
+  left: -350px;
+  width: 350px;
   min-height: 100vh;
   -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  z-index: 99;
 }
 
-.sidebar .menu .title {
+.sidebar-wrapper .sidebar .menu.active {
+  left: 0;
+}
+
+.sidebar-wrapper .sidebar .menu .title {
   width: 100%;
   height: 41px;
   display: -webkit-box;
@@ -3666,29 +3691,376 @@ h2 {
   font-weight: 600;
 }
 
-.sidebar .menu .accordion__item .title {
+.sidebar-wrapper .sidebar .menu .accordion__item .title {
   position: relative;
 }
 
-.sidebar .menu .accordion__item .title::after {
+.sidebar-wrapper .sidebar .menu .accordion__item .title::after {
   content: url(../img/admin-sidebar-arrow.svg);
   position: absolute;
   top: 13px;
   right: 17px;
 }
 
-.sidebar .menu .accordion__item .title:not(.collapsed) {
+.sidebar-wrapper .sidebar .menu .accordion__item .title:not(.collapsed) {
   color: #848484;
 }
 
-.sidebar .menu .accordion__item .accordion-collapse {
+.sidebar-wrapper .sidebar .menu .accordion__item .accordion-collapse {
   padding: 5px 10px 5px 160px;
   border-bottom: 1px solid #F3F4F6;
 }
 
-.sidebar .menu .accordion__item .accordion-collapse li a {
+.sidebar-wrapper .sidebar .menu .accordion__item .accordion-collapse li a {
   font-size: 12px;
   color: #848484;
   display: block;
   margin-bottom: 5px;
+}
+
+.admin-orders .create-order-btn, .admin-orders .orders-table .orders-table__item .actions .pay-online {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #86BFD4;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 14px;
+  width: 150px;
+  height: 37px;
+}
+
+.admin-orders .orders-table .orders-table__item .actions .pay-on-sklad {
+  width: 150px;
+  height: 37px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 0.5px solid #B0B0B0;
+  border-radius: 2px;
+  color: #B0B0B0;
+  font-size: 14px;
+}
+
+.admin-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 38px 0 13px 0;
+}
+
+.admin-title p {
+  font-size: 16px;
+  color: #464C4C;
+}
+
+.admin-title span {
+  color: #2E6FA5;
+}
+
+.admin-orders .create-order-btn {
+  margin-bottom: 13px;
+}
+
+.admin-orders .orders-table .number {
+  width: 50px;
+  text-align: center;
+}
+
+.admin-orders .orders-table .info {
+  width: 280px;
+}
+
+.admin-orders .orders-table .products {
+  width: 280px;
+}
+
+.admin-orders .orders-table .sum {
+  width: 100px;
+  text-align: center;
+}
+
+.admin-orders .orders-table .total {
+  width: 100px;
+  text-align: center;
+}
+
+.admin-orders .orders-table .status {
+  width: 100px;
+  text-align: center;
+}
+
+.admin-orders .orders-table .orders-table__item .content {
+  background: #FFFFFF;
+  -webkit-box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.admin-orders .orders-table .orders-table__item .content .info p {
+  font-size: 13px;
+  color: #464C4C;
+}
+
+.admin-orders .orders-table .orders-table__item .content .info p b {
+  font-weight: 700;
+}
+
+.admin-orders .orders-table .orders-table__item .content .products .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 15px;
+  font-size: 13px;
+}
+
+.admin-orders .orders-table .orders-table__item:nth-child(2n-1) .content {
+  background: #EBFAFF;
+}
+
+.admin-orders .orders-table .orders-table__item .actions {
+  position: relative;
+  margin: 6px 0 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  gap: 10px;
+}
+
+.admin-orders .orders-table .orders-table__item .actions .pay-on-sklad {
+  width: 143px;
+}
+
+.admin-orders .orders-table .orders-table__item .actions .pay-online {
+  width: 143px;
+}
+
+.admin-orders .orders-table .orders-table__item .actions .pdf, .admin-orders .orders-table .orders-table__item .actions .delete {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 37px;
+  min-width: 37px;
+  height: 37px;
+  background: #FFFFFF;
+  border: 0.5px solid #B0B0B0;
+  border-radius: 2px;
+}
+
+.admin-orders .orders-table .orders-table__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #2E6FA5;
+  color: #fff;
+  font-weight: 700;
+  padding: 5px 10px;
+  -webkit-box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 4px 4px 0 0;
+}
+
+.admin-orders .orders-table .orders-table__title div {
+  text-align: center;
+}
+
+@media screen and (max-width: 1800px) {
+  .sidebar-wrapper .sidebar .menu {
+    width: 210px;
+  }
+  .sidebar-wrapper .sidebar .menu .title {
+    padding-left: 17px;
+  }
+  .sidebar-wrapper .sidebar .menu .accordion__item .accordion-collapse {
+    padding-left: 17px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .admin-header .top .info .text {
+    margin-left: 12px;
+  }
+  .sidebar-wrapper .sidebar .icons {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .admin-header .top {
+    padding: 10px 0;
+  }
+  .admin-header .top .info {
+    height: auto;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .admin-header .top .info .text {
+    margin-top: -3px;
+    font-size: 14px;
+    margin-right: 10px;
+  }
+  .admin-header .bottom .wrapper .text {
+    white-space: nowrap;
+    font-weight: 400;
+    margin-right: 20px;
+  }
+  .admin-header .bottom .wrapper .btn {
+    white-space: nowrap;
+    margin-right: 10px;
+  }
+  .admin-header .bottom .wrapper .burger {
+    position: relative;
+    left: 0;
+    margin-right: 20px;
+  }
+  .orders-table .orders-table__title {
+    display: none !important;
+  }
+  .orders-table .orders-table__item .content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 10px !important;
+  }
+  .orders-table .orders-table__item .content > div {
+    width: 100% !important;
+    text-align: left;
+    position: relative;
+    padding: 5px 0;
+  }
+  .orders-table .orders-table__item .content > div:not(.status) {
+    border-bottom: 1px solid #EEEFF1;
+  }
+  .orders-table .orders-table__item .content > div.number {
+    border-bottom: none;
+  }
+  .orders-table .orders-table__item .content > div::before {
+    position: absolute;
+    right: 0;
+    top: -5px;
+    color: #86BFD4;
+    font-size: 13px;
+    font-weight: 500;
+  }
+  .orders-table .orders-table__item .content .info {
+    margin-top: -20px;
+  }
+  .orders-table .orders-table__item .content .products {
+    padding-top: 15px;
+  }
+  .orders-table .orders-table__item .content .products::before {
+    content: 'Товары';
+  }
+  .orders-table .orders-table__item .content .sum {
+    padding-top: 15px;
+  }
+  .orders-table .orders-table__item .content .sum::before {
+    content: 'Сумма заказа';
+  }
+  .orders-table .orders-table__item .content .total {
+    padding-top: 15px;
+  }
+  .orders-table .orders-table__item .content .total::before {
+    content: 'К оплате';
+  }
+  .orders-table .orders-table__item .content .status {
+    padding-top: 15px;
+  }
+  .orders-table .orders-table__item .content .status::before {
+    content: 'Статус';
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .admin-header .bottom .wrapper {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .admin-header .bottom .wrapper .close {
+    position: absolute;
+    top: 7px;
+    right: 0;
+  }
+  .admin-header .bottom .wrapper .text {
+    margin-bottom: 10px;
+  }
+  .admin-header .bottom .wrapper .btn {
+    margin: 10px auto;
+  }
+  .admin-header .bottom .wrapper select {
+    margin-left: -3px;
+    font-size: 13px;
+  }
+  .admin-header .bottom .wrapper .burger {
+    margin-right: 15px;
+  }
+  .admin-header .bottom .wrapper .country {
+    margin-right: 10px !important;
+  }
+  .admin-header .bottom .wrapper .icons {
+    display: none;
+  }
+  .admin-orders .orders-table .orders-table__item .actions {
+    padding-top: 45px;
+  }
+  .admin-orders .orders-table .orders-table__item .actions .pay-on-sklad {
+    width: 100%;
+  }
+  .admin-orders .orders-table .orders-table__item .actions .pay-online {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
 }

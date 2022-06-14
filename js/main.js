@@ -72,14 +72,18 @@ const mobileMenu = document.querySelector('.mobile-menu')
 const btnMenuOpen = document.querySelector('.burger')
 const btnMenuClose = document.querySelector('.mobile-menu .close')
 
-btnMenuOpen.addEventListener('click', () => {
-    mobileMenu.classList.add('active')
-})
+if (btnMenuOpen && mobileMenu) {
+    btnMenuOpen.addEventListener('click', () => {
+        mobileMenu.classList.add('active')
+    })
+}
 
 
-btnMenuClose.addEventListener('click', () => {
-    mobileMenu.classList.remove('active')
-})
+if (btnMenuClose && mobileMenu) {
+    btnMenuClose.addEventListener('click', () => {
+        mobileMenu.classList.remove('active')
+    })
+}
 
 
 $('.certificates-wrapper').owlCarousel({
@@ -239,3 +243,13 @@ $('.catalogWrapper').owlCarousel(programsObj);
 $('.catalogWrapper-1').owlCarousel(programsObj);
 $('.catalogWrapper-2').owlCarousel(programsObj);
 $('.catalogWrapper-3').owlCarousel(programsObj);
+
+
+const adminBurger = document.querySelector('.admin-header .burger');
+const adminSidebar = document.querySelector('.sidebar .menu');
+
+console.log(adminBurger);
+
+adminBurger.addEventListener('click', () => {
+    adminSidebar.classList.toggle('active');
+})
