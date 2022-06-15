@@ -2903,6 +2903,59 @@ h2 {
     }
 }
 
+.admin-footer {
+    margin-top: 100px;
+    color: #fff;
+    padding: 25px 0;
+    background: #464C4C;
+
+    .links {
+        display: flex;
+        justify-content: flex-end;
+        gap: 5px;
+
+        a {
+            color: #fff;
+        }
+    }
+}
+
+
+.our-online {
+    min-height: calc(100vh - 150px);
+    .text {
+        font-size: 16px;
+        color: #464C4C;
+        line-height: 19px;
+
+        p {
+            margin-bottom: 10px;
+
+            b {
+                font-weight: 700;
+                color: #2E6FA5;
+
+                span {
+                    display: block;
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+
+    .video {
+        margin-top: 20px;
+
+        iframe {
+            max-width: 100%;
+        }
+    }
+}
+
+
+
+
+
 @media screen and (max-width: 1800px) {
     .sidebar-wrapper {
         .sidebar {
@@ -2933,6 +2986,12 @@ h2 {
             .icons {
                 display: none;
             }
+        }
+    }
+
+    .our-online {
+        .text p b br {
+            display: none;
         }
     }
 }
@@ -3052,9 +3111,6 @@ h2 {
 
 @media screen and (max-width: 767px) {
     .admin-header {
-        .top {
-            // height: 100px;
-        }
         .bottom {
             .wrapper {
                 justify-content: flex-start;
@@ -3095,6 +3151,15 @@ h2 {
         }
     }
 
+    .admin-footer {
+        text-align: center;
+
+        .links {
+            margin-top: 15px;
+            justify-content: center;
+        }
+    }
+
     .admin-orders {
         .orders-table {
             .orders-table__item {
@@ -3115,11 +3180,17 @@ h2 {
             }
         }
     }
+
+    .our-online {
+        .text {
+            font-size: 14px;
+            line-height: 17px;
+
+            p b {
+                span {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
 }
-
-
-// .admin-title {
-    //     span {
-    //         display: none;
-    //     }
-    // }
