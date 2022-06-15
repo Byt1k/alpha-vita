@@ -3718,7 +3718,7 @@ h2 {
   margin-bottom: 5px;
 }
 
-.admin-orders .create-order-btn, .admin-orders .orders-table .orders-table__item .actions .pay-online {
+.admin-orders .create-order-btn, .admin-orders .orders-table .orders-table__item .actions .pay-online, .private-partners .filter .apply {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3960,6 +3960,120 @@ h2 {
   max-width: 100%;
 }
 
+.private-partners {
+  min-height: calc(100vh - 150px);
+}
+
+.private-partners .filter {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  gap: 20px;
+}
+
+.private-partners .filter .field label {
+  margin-left: 10px;
+}
+
+.private-partners .filter .field input {
+  padding: 0 10px;
+  display: block;
+  width: 210px;
+  height: 36px;
+  background: #FFFFFF;
+  -webkit-box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+}
+
+.private-partners .table-wrapper {
+  overflow-x: auto;
+}
+
+.private-partners .table {
+  -webkit-box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 4px 4px;
+  width: 1160px;
+}
+
+.private-partners .table tr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 15px;
+  padding: 10px 5px;
+}
+
+.private-partners .table tr td {
+  border: none;
+  text-align: center;
+}
+
+.private-partners .table tr td.number {
+  width: 25px;
+}
+
+.private-partners .table tr td.id {
+  width: 100px;
+}
+
+.private-partners .table tr td.name {
+  width: 250px;
+  text-align: left;
+}
+
+.private-partners .table tr td.location {
+  width: 120px;
+}
+
+.private-partners .table tr td.contacts {
+  width: 130px;
+}
+
+.private-partners .table tr td.option {
+  width: 50px;
+}
+
+.private-partners .table tr td.class {
+  width: 105px;
+}
+
+.private-partners .table tr td.lo, .private-partners .table tr td.go {
+  width: 100px;
+}
+
+.private-partners .table tr:nth-child(2n-1) {
+  background: #EBFAFF;
+}
+
+.private-partners .table .title {
+  padding: 5px;
+  background: #2E6FA5 !important;
+  -webkit-box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 4px 4px 0 0;
+}
+
+.private-partners .table .title td {
+  color: #fff;
+  font-weight: 700;
+}
+
+.private-partners .table .title td.name {
+  text-align: center;
+}
+
 @media screen and (max-width: 1800px) {
   .sidebar-wrapper .sidebar .menu {
     width: 210px;
@@ -4070,6 +4184,17 @@ h2 {
   .orders-table .orders-table__item .content .status::before {
     content: 'Статус';
   }
+  .private-partners .filter {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .private-partners .filter .field {
+    width: 31%;
+  }
+  .private-partners .filter .field input {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -4107,6 +4232,9 @@ h2 {
   .admin-header .bottom .wrapper .icons {
     display: none;
   }
+  .admin-title span {
+    display: none;
+  }
   .admin-footer {
     text-align: center;
   }
@@ -4134,5 +4262,8 @@ h2 {
   }
   .our-online .text p b span {
     font-size: 12px;
+  }
+  .private-partners .filter .field {
+    width: 100%;
   }
 }

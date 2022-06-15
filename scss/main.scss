@@ -2953,7 +2953,114 @@ h2 {
 }
 
 
+.private-partners {
+    min-height: calc(100vh - 150px);
+    
+    .filter {
+        flex-wrap: wrap;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: flex-end;
+        gap: 20px;
 
+        .field {
+            label {
+                margin-left: 10px;
+            }
+
+            input {
+                padding: 0 10px;
+                display: block;
+                width: 210px;
+                height: 36px;
+                background: #FFFFFF;
+                box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.1);
+                border-radius: 2px;
+            }
+        }
+        
+        .apply {
+            @extend %adminMainBtn;       
+        }
+    }
+
+    .table-wrapper {
+        overflow-x: auto;
+    }
+
+    .table {     
+        box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 0 0 4px 4px;
+        width: 1160px;
+
+        tr {
+
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            padding: 10px 5px;
+
+            td {
+                border: none;
+                text-align: center;
+
+                &.number {
+                    width: 25px;
+                }
+
+                &.id {
+                    width: 100px;
+                }
+                
+                &.name {
+                    width: 250px;
+                    text-align: left;
+                }
+
+                &.location {
+                    width: 120px;
+                }
+
+                &.contacts {
+                    width: 130px;
+                }
+
+                &.option {
+                    width: 50px;
+                }
+
+                &.class {
+                    width: 105px;
+                }
+
+                &.lo, &.go {
+                    width: 100px;
+                }
+            }
+
+            &:nth-child(2n-1) {
+                background: #EBFAFF;
+            }
+        }
+
+        .title {
+            padding: 5px;
+            background: #2E6FA5 !important;
+            box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 4px 4px 0 0;
+
+            td {
+                color: #fff;
+                font-weight: 700;
+                
+                &.name {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
 
 
 @media screen and (max-width: 1800px) {
@@ -3107,6 +3214,19 @@ h2 {
             }
         }
     }
+
+    .private-partners {
+        .filter {
+            justify-content: center;
+
+            .field {
+                width: 31%;
+                input {
+                    width: 100%;
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -3151,6 +3271,12 @@ h2 {
         }
     }
 
+    .admin-title {
+        span {
+            display: none;
+        }
+    }
+
     .admin-footer {
         text-align: center;
 
@@ -3190,6 +3316,14 @@ h2 {
                 span {
                     font-size: 12px;
                 }
+            }
+        }
+    }
+
+    .private-partners {
+        .filter {
+            .field {
+                width: 100%;
             }
         }
     }
