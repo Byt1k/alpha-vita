@@ -199,17 +199,17 @@ a, button {
   color: #fff;
 }
 
-.program-filter .program-filter-wrapper .program-filter-row .item {
+.program-filter .program-filter-wrapper .program-filter-row .item, .create-order .sales .table tr td.operation .checkbox, .create-order .receiving-order .checkbox, .create-order .group-order .checkbox {
   position: relative;
 }
 
-.program-filter .program-filter-wrapper .program-filter-row .item input {
+.program-filter .program-filter-wrapper .program-filter-row .item input, .create-order .sales .table tr td.operation .checkbox input, .create-order .receiving-order .checkbox input, .create-order .group-order .checkbox input {
   opacity: 0;
   width: 0;
   height: 0;
 }
 
-.program-filter .program-filter-wrapper .program-filter-row .item label.check {
+.program-filter .program-filter-wrapper .program-filter-row .item label.check, .create-order .sales .table tr td.operation .checkbox label.check, .create-order .receiving-order .checkbox label.check, .create-order .group-order .checkbox label.check {
   width: 18px;
   height: 18px;
   background: #FFFFFF;
@@ -226,14 +226,14 @@ a, button {
           justify-content: center;
 }
 
-.program-filter .program-filter-wrapper .program-filter-row .item label.check span {
+.program-filter .program-filter-wrapper .program-filter-row .item label.check span, .create-order .sales .table tr td.operation .checkbox label.check span, .create-order .receiving-order .checkbox label.check span, .create-order .group-order .checkbox label.check span {
   width: 14px;
   height: 14px;
   border-radius: 1px;
   background-color: #fff;
 }
 
-.program-filter .program-filter-wrapper .program-filter-row .item input:checked + label.check span {
+.program-filter .program-filter-wrapper .program-filter-row .item input:checked + label.check span, .create-order .sales .table tr td.operation .checkbox input:checked + label.check span, .create-order .receiving-order .checkbox input:checked + label.check span, .create-order .group-order .checkbox input:checked + label.check span {
   background: #464C4C;
 }
 
@@ -3718,7 +3718,7 @@ h2 {
   margin-bottom: 5px;
 }
 
-.admin-orders .create-order-btn, .admin-orders .orders-table .orders-table__item .actions .pay-online, .private-partners .filter .apply {
+.admin-orders .create-order-btn, .admin-orders .orders-table .orders-table__item .actions .pay-online, .private-partners .filter .apply, .create-order .send {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4001,7 +4001,7 @@ h2 {
   -webkit-box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.1);
           box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 0 0 4px 4px;
-  width: 1160px;
+  width: 1159px;
 }
 
 .private-partners .table tr {
@@ -4012,7 +4012,7 @@ h2 {
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 15px;
-  padding: 10px 5px;
+  padding: 5px;
 }
 
 .private-partners .table tr td {
@@ -4058,7 +4058,7 @@ h2 {
 }
 
 .private-partners .table .title {
-  padding: 5px;
+  padding: 0 5px;
   background: #2E6FA5 !important;
   -webkit-box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.1);
           box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.1);
@@ -4072,6 +4072,264 @@ h2 {
 
 .private-partners .table .title td.name {
   text-align: center;
+}
+
+.create-order .my-orders {
+  margin-bottom: 34px;
+  margin-top: 10px;
+  overflow-x: auto;
+}
+
+.create-order .my-orders .table {
+  -webkit-box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 4px 4px;
+  width: 1159px;
+}
+
+.create-order .my-orders .table tr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 15px;
+  padding: 5px;
+}
+
+.create-order .my-orders .table tr td {
+  border: none;
+  text-align: center;
+}
+
+.create-order .my-orders .table tr td.code {
+  width: 100px;
+}
+
+.create-order .my-orders .table tr td.name {
+  width: 450px;
+  text-align: left;
+}
+
+.create-order .my-orders .table tr td.cv {
+  width: 110px;
+}
+
+.create-order .my-orders .table tr td.price {
+  width: 110px;
+}
+
+.create-order .my-orders .table tr td.count {
+  width: 120px;
+}
+
+.create-order .my-orders .table tr td.count input {
+  display: block;
+  text-align: center;
+  width: 50px;
+  margin: 0 auto;
+  background: inherit;
+}
+
+.create-order .my-orders .table tr td.count input[type=number]::-webkit-inner-spin-button,
+.create-order .my-orders .table tr td.count input[type=number]::-webkit-outer-spin-button {
+  opacity: 1 !important;
+}
+
+.create-order .my-orders .table tr td.sum {
+  width: 100px;
+}
+
+.create-order .my-orders .table tr:nth-child(2n-1) {
+  background: #EBFAFF;
+}
+
+.create-order .my-orders .table .title {
+  padding: 0 5px;
+  background: #2E6FA5 !important;
+  -webkit-box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 4px 4px 0 0;
+}
+
+.create-order .my-orders .table .title td {
+  color: #fff;
+  font-weight: 700;
+}
+
+.create-order .my-orders .table .title td.name {
+  text-align: center;
+}
+
+.create-order .sales .table {
+  -webkit-box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 4px 4px;
+  width: 100%;
+}
+
+.create-order .sales .table tr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 15px;
+  padding: 5px;
+}
+
+.create-order .sales .table tr td {
+  border: none;
+  text-align: center;
+}
+
+.create-order .sales .table tr td.number {
+  width: 50px;
+}
+
+.create-order .sales .table tr td.name {
+  width: 260px;
+  text-align: left;
+}
+
+.create-order .sales .table tr td.operation {
+  width: 90px;
+}
+
+.create-order .sales .table tr td.operation .checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.create-order .sales .table tr:nth-child(2n-1) {
+  background: #EBFAFF;
+}
+
+.create-order .sales .table .title {
+  padding: 0 5px;
+  background: #2E6FA5 !important;
+  -webkit-box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 4px 4px 0 0;
+}
+
+.create-order .sales .table .title td {
+  color: #fff;
+  font-weight: 700;
+}
+
+.create-order .sales .table .title td.name {
+  text-align: center;
+}
+
+.create-order .attention {
+  color: #2E6FA5;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #C4C4C4;
+  margin-bottom: 10px;
+  line-height: 17px;
+}
+
+.create-order .total-price {
+  text-align: right;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 39px;
+  color: #2E6FA5;
+}
+
+.create-order .receiving-order {
+  font-size: 16px;
+  color: #000;
+}
+
+.create-order .receiving-order .title {
+  padding-bottom: 9px;
+  margin-bottom: 23px;
+  border-bottom: 1px solid #c4c4c4;
+  padding-left: 20px;
+}
+
+.create-order .receiving-order .checkbox {
+  padding-left: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 21px;
+}
+
+.create-order .note {
+  margin-top: 10px;
+}
+
+.create-order .note .title {
+  font-size: 16px;
+  color: #000;
+  padding-left: 20px;
+  padding-bottom: 9px;
+  margin-bottom: 23px;
+  border-bottom: 1px solid #c4c4c4;
+}
+
+.create-order .note textarea {
+  margin-bottom: 29px;
+  margin-left: 20px;
+  width: calc(100% - 20px);
+  height: 140px;
+  resize: none;
+  background: #FFFFFF;
+  -webkit-box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+}
+
+.create-order .group-order {
+  font-size: 16px;
+  color: #000;
+}
+
+.create-order .group-order .title {
+  font-size: 16px;
+  color: #000;
+  padding-left: 20px;
+  padding-bottom: 9px;
+  margin-bottom: 23px;
+  border-bottom: 1px solid #c4c4c4;
+}
+
+.create-order .group-order .checkbox {
+  padding-left: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 21px;
+}
+
+.create-order .group-order .attention {
+  color: #2E6FA5;
+  margin-left: 20px;
+  border-bottom: none;
+}
+
+.create-order .send {
+  margin: 20px auto;
 }
 
 @media screen and (max-width: 1800px) {
@@ -4194,6 +4452,9 @@ h2 {
   }
   .private-partners .filter .field input {
     width: 100%;
+  }
+  .create-order .sales .table tr td.name {
+    width: 160px;
   }
 }
 

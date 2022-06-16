@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage | Alpha Vita</title>
+    <title>Create order | Alpha Vita</title>
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     
     <link href="https://fonts.googleapis.com/css2?family=Inter&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
@@ -200,7 +200,7 @@
             </ul>
         </div>
     </div>
-    <section class="admin-orders">
+    <section class="create-order">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -208,241 +208,152 @@
                         <p>Мои заказы</p>
                         <span>[0000000] Фамилия, Имя</span>
                     </div>
-                    <button class="create-order-btn">Создать заказ</button>
                 </div>
             </div>
             <div class="row">
-                <div class="orders-table">
-                    <div class="orders-table__item orders-table__title">
-                        <div class="number">№</div>
-                        <div class="info">Информация</div>
-                        <div class="products">Товары</div>
-                        <div class="sum">Сумма заказа</div>
-                        <div class="total">К оплате</div>
-                        <div class="status">Статус</div>
+                <div class="col-12">
+                    <div class="my-orders">
+                        <table class="table">
+                            <tr class="title">
+                                <td class="code">Артикул</td>
+                                <td class="name">Наименование</td>
+                                <td class="cv">CV</td>
+                                <td class="price">Цена</td>
+                                <td class="count">Количество</td>
+                                <td class="sum">Сумма</td>
+                            </tr>
+                            <tr>
+                                <td class="code">А000</td>
+                                <td class="name">Gorgeous Regeneration ProFace 50 ml</td>
+                                <td class="cv">00,00</td>
+                                <td class="price">0 000,00</td>
+                                <td class="count">
+                                    <input type="number" min="0" value="0">
+                                </td>
+                                <td class="sum">00 000.00</td>
+                            </tr>
+                            <tr>
+                                <td class="code">А000</td>
+                                <td class="name">Gorgeous Regeneration ProFace 50 ml</td>
+                                <td class="cv">00,00</td>
+                                <td class="price">0 000,00</td>
+                                <td class="count">
+                                    <input type="number" min="0" value="0">
+                                </td>
+                                <td class="sum">00 000.00</td>
+                            </tr>
+                            <tr>
+                                <td class="code">А000</td>
+                                <td class="name">Gorgeous Regeneration ProFace 50 ml</td>
+                                <td class="cv">00,00</td>
+                                <td class="price">0 000,00</td>
+                                <td class="count">
+                                    <input type="number" min="0" value="0">
+                                </td>
+                                <td class="sum">00 000.00</td>
+                            </tr>
+                            <tr>
+                                <td class="code">А000</td>
+                                <td class="name">Gorgeous Regeneration ProFace 50 ml</td>
+                                <td class="cv">00,00</td>
+                                <td class="price">0 000,00</td>
+                                <td class="count">
+                                    <input type="number" min="0" value="0">
+                                </td>
+                                <td class="sum">00 000.00</td>
+                            </tr>
+                            <tr>
+                                <td class="code">А000</td>
+                                <td class="name">Gorgeous Regeneration ProFace 50 ml</td>
+                                <td class="cv">00,00</td>
+                                <td class="price">0 000,00</td>
+                                <td class="count">
+                                    <input type="number" min="0" value="0">
+                                </td>
+                                <td class="sum">00 000.00</td>
+                            </tr>
+                        </table>
                     </div>
-                    <div class="orders-table__item">
-                        <div class="content">
-                            <div class="number">41583</div>
-                            <div class="info">
-                                <p><b>Дата создания: </b>2022-04-24 10:32</p>
-                                <p><b>Заказчик: </b>Байгуисовы Савит, Санья</p>
-                                <p><b>Период: </b>Апрель 2022</p>
-                                <p><b>Пункт выдачи: </b>Москва - центральный склад</p>
-                                <p><b>Доставка: </b>СДЭК</p>
-                                <p><b>Комментарии: </b>нет</p>
-                            </div>
-                            <div class="products">
-                                <div class="item">
-                                    <div class="name">[A12] Vita Magnesium</div>
-                                    <div class="count">1</div>
-                                </div>
-                                <div class="item">
-                                    <div class="name">[A15] FlavoMarine</div>
-                                    <div class="count">1</div>
-                                </div>
-                                <div class="item">
-                                    <div class="name">[A3] Vita O2</div>
-                                    <div class="count">1</div>
-                                </div>
-                                <div class="item">
-                                    <div class="name">[A4] Vita Min</div>
-                                    <div class="count">1</div>
-                                </div>
-                                <div class="item">
-                                    <div class="name">[G05] Gorgeous Regeneration ProFace 50 ml Mono Pack 4+1</div>
-                                    <div class="count">1</div>
-                                </div>
-                            </div>
-                            <div class="sum">
-                                <div>19 300,00RUB</div>
-                                <div>105CV</div>
-                            </div>
-                            <div class="total">
-                                19 300.00RUB
-                            </div>
-                            <div class="status">
-                                В ожидании
-                            </div>
-                        </div>
-                        <div class="actions">
-                            <button class="pay-on-sklad">Оплатить на складе</button>
-                            <button class="pay-online">Оплатить онлайн</button>
-                            <button class="pdf">
-                                <img src="img/pdf.svg" alt="pdf">
-                            </button>
-                            <button class="delete">
-                                <img src="img/delete.svg" alt="delete">
-                            </button>
-                        </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="sales">
+                        <table class="table">
+                            <tr class="title">
+                                <td class="number">№</td>
+                                <td class="name">Название скидки</td>
+                                <td class="operation">Операция</td>
+                            </tr>
+                            <tr>
+                                <td class="number">000</td>
+                                <td class="name">Mono Pack 4+1</td>
+                                <td class="operation">
+                                    <div class="checkbox">
+                                        <input type="checkbox" id="sale-1">
+                                        <label for="sale-1" class="check"><span></span></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="number">000</td>
+                                <td class="name">Mono Pack 4+1</td>
+                                <td class="operation">
+                                    <div class="checkbox">
+                                        <input type="checkbox" id="sale-1">
+                                        <label for="sale-1" class="check"><span></span></label>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
                     </div>
-                    <div class="orders-table__item">
-                        <div class="content">
-                            <div class="number">41583</div>
-                            <div class="info">
-                                <p><b>Дата создания: </b>2022-04-24 10:32</p>
-                                <p><b>Заказчик: </b>Байгуисовы Савит, Санья</p>
-                                <p><b>Период: </b>Апрель 2022</p>
-                                <p><b>Пункт выдачи: </b>Москва - центральный склад</p>
-                                <p><b>Доставка: </b>СДЭК</p>
-                                <p><b>Комментарии: </b>нет</p>
-                            </div>
-                            <div class="products">
-                                <div class="item">
-                                    <div class="name">[A12] Vita Magnesium</div>
-                                    <div class="count">1</div>
-                                </div>
-                                <div class="item">
-                                    <div class="name">[A15] FlavoMarine</div>
-                                    <div class="count">1</div>
-                                </div>
-                                <div class="item">
-                                    <div class="name">[A3] Vita O2</div>
-                                    <div class="count">1</div>
-                                </div>
-                                <div class="item">
-                                    <div class="name">[A4] Vita Min</div>
-                                    <div class="count">1</div>
-                                </div>
-                                <div class="item">
-                                    <div class="name">[G05] Gorgeous Regeneration ProFace 50 ml Mono Pack 4+1</div>
-                                    <div class="count">1</div>
-                                </div>
-                            </div>
-                            <div class="sum">
-                                <div>19 300,00RUB</div>
-                                <div>105CV</div>
-                            </div>
-                            <div class="total">
-                                19 300.00RUB
-                            </div>
-                            <div class="status">
-                                В ожидании
-                            </div>
-                        </div>
-                        <div class="actions">
-                            <button class="pay-on-sklad">Оплатить на складе</button>
-                            <button class="pay-online">Оплатить онлайн</button>
-                            <button class="pdf">
-                                <img src="img/pdf.svg" alt="pdf">
-                            </button>
-                            <button class="delete">
-                                <img src="img/delete.svg" alt="delete">
-                            </button>
-                        </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="attention">
+                        Внимание!!! <br>
+                        При формирование заказа по акции, нужно выбрать все продукты включая подарочный
+                        и поставить галочку по какому промоушену или акции вы совершаете покупку.
                     </div>
-                    <div class="orders-table__item">
-                        <div class="content">
-                            <div class="number">41583</div>
-                            <div class="info">
-                                <p><b>Дата создания: </b>2022-04-24 10:32</p>
-                                <p><b>Заказчик: </b>Байгуисовы Савит, Санья</p>
-                                <p><b>Период: </b>Апрель 2022</p>
-                                <p><b>Пункт выдачи: </b>Москва - центральный склад</p>
-                                <p><b>Доставка: </b>СДЭК</p>
-                                <p><b>Комментарии: </b>нет</p>
-                            </div>
-                            <div class="products">
-                                <div class="item">
-                                    <div class="name">[A12] Vita Magnesium</div>
-                                    <div class="count">1</div>
-                                </div>
-                                <div class="item">
-                                    <div class="name">[A15] FlavoMarine</div>
-                                    <div class="count">1</div>
-                                </div>
-                                <div class="item">
-                                    <div class="name">[A3] Vita O2</div>
-                                    <div class="count">1</div>
-                                </div>
-                                <div class="item">
-                                    <div class="name">[A4] Vita Min</div>
-                                    <div class="count">1</div>
-                                </div>
-                                <div class="item">
-                                    <div class="name">[G05] Gorgeous Regeneration ProFace 50 ml Mono Pack 4+1</div>
-                                    <div class="count">1</div>
-                                </div>
-                            </div>
-                            <div class="sum">
-                                <div>19 300,00RUB</div>
-                                <div>105CV</div>
-                            </div>
-                            <div class="total">
-                                19 300.00RUB
-                            </div>
-                            <div class="status">
-                                В ожидании
-                            </div>
+                    <div class="total-price">ИТОГО: 00 000,00 ₽</div>
+                </div>
+                <div class="col-12">
+                    <div class="receiving-order">
+                        <div class="title">Выберите способ получения заказа</div>
+                        <div class="checkbox">
+                            <input type="radio" name="receivinig-order" id="way-1">
+                            <label for="way-1" class="check"><span></span></label>
+                            <label for="way-1">Самовывоз</label>
                         </div>
-                        <div class="actions">
-                            <button class="pay-on-sklad">Оплатить на складе</button>
-                            <button class="pay-online">Оплатить онлайн</button>
-                            <button class="pdf">
-                                <img src="img/pdf.svg" alt="pdf">
-                            </button>
-                            <button class="delete">
-                                <img src="img/delete.svg" alt="delete">
-                            </button>
+                        <div class="checkbox">
+                            <input type="radio" name="receivinig-order" id="way-2">
+                            <label for="way-2" class="check"><span></span></label>
+                            <label for="way-2">Доставка с групповым заказом</label>
+                        </div>
+                        <div class="checkbox">
+                            <input type="radio" name="receivinig-order" id="way-3">
+                            <label for="way-3" class="check"><span></span></label>
+                            <label for="way-3">Доставка по России компанией СДЭК</label>
                         </div>
                     </div>
-                    <div class="orders-table__item">
-                        <div class="content">
-                            <div class="number">41583</div>
-                            <div class="info">
-                                <p><b>Дата создания: </b>2022-04-24 10:32</p>
-                                <p><b>Заказчик: </b>Байгуисовы Савит, Санья</p>
-                                <p><b>Период: </b>Апрель 2022</p>
-                                <p><b>Пункт выдачи: </b>Москва - центральный склад</p>
-                                <p><b>Доставка: </b>СДЭК</p>
-                                <p><b>Комментарии: </b>нет</p>
-                            </div>
-                            <div class="products">
-                                <div class="item">
-                                    <div class="name">[A12] Vita Magnesium</div>
-                                    <div class="count">1</div>
-                                </div>
-                                <div class="item">
-                                    <div class="name">[A15] FlavoMarine</div>
-                                    <div class="count">1</div>
-                                </div>
-                                <div class="item">
-                                    <div class="name">[A3] Vita O2</div>
-                                    <div class="count">1</div>
-                                </div>
-                                <div class="item">
-                                    <div class="name">[A4] Vita Min</div>
-                                    <div class="count">1</div>
-                                </div>
-                                <div class="item">
-                                    <div class="name">[G05] Gorgeous Regeneration ProFace 50 ml Mono Pack 4+1</div>
-                                    <div class="count">1</div>
-                                </div>
-                            </div>
-                            <div class="sum">
-                                <div>19 300,00RUB</div>
-                                <div>105CV</div>
-                            </div>
-                            <div class="total">
-                                19 300.00RUB
-                            </div>
-                            <div class="status">
-                                В ожидании
-                            </div>
+                    <div class="note">
+                        <div class="title">Примечание к заказу</div>
+                        <textarea></textarea>
+                    </div>
+                    <div class="group-order">
+                        <div class="title">Групповой заказ</div>
+                        <div class="checkbox">
+                            <input type="checkbox" id="group-order">
+                            <label for="group-order" class="check"><span></span></label>
+                            <label for="group-order">Данный заказ является групповым!</label>
                         </div>
-                        <div class="actions">
-                            <button class="pay-on-sklad">Оплатить на складе</button>
-                            <button class="pay-online">Оплатить онлайн</button>
-                            <button class="pdf">
-                                <img src="img/pdf.svg" alt="pdf">
-                            </button>
-                            <button class="delete">
-                                <img src="img/delete.svg" alt="delete">
-                            </button>
+                        <div class="attention">
+                            Внимание!!! Отмечайте это, только в том случае, если вы точно знаете, что такое групповой заказ, о сроках отправки обязательно напишите в Примечании к заказу!
                         </div>
                     </div>
                 </div>
+                <div class="col-12">
+                    <button class="send">Оформить</button>
+                </div>
             </div>
+            
         </div>
     </section>
     <footer class="admin-footer">
