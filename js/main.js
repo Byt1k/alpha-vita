@@ -248,8 +248,37 @@ $('.catalogWrapper-3').owlCarousel(programsObj);
 const adminBurger = document.querySelector('.admin-header .burger');
 const adminSidebar = document.querySelector('.sidebar .menu');
 
-console.log(adminBurger);
 
 adminBurger.addEventListener('click', () => {
     adminSidebar.classList.toggle('active');
+})
+
+
+const avaArr = document.querySelectorAll('.structure .ava');
+
+avaArr.forEach(item => {
+    item.addEventListener('mouseover', (e) => {
+        e.target.parentNode.querySelector('.info').classList.add('active')
+    })
+    item.addEventListener('mouseout', (e) => {
+        e.target.parentNode.querySelector('.info').classList.remove('active')
+    })
+})
+
+
+const structure = document.querySelector('.structure');
+
+const structureZoomIn = document.querySelector('.my-structure .zoomIn')
+const structureZoomOut = document.querySelector('.my-structure .zoomOut')
+
+let scale = 1;
+
+structureZoomIn.addEventListener('click', () => {
+    scale = scale + 0.5;
+    structure.style.transform = `scale(${scale})`;
+})
+
+structureZoomOut.addEventListener('click', () => {
+    scale = scale - 0.5;
+    structure.style.transform = `scale(${scale})`;
 })
