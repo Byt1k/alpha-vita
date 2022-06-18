@@ -273,12 +273,56 @@ const structureZoomOut = document.querySelector('.my-structure .zoomOut')
 
 let scale = 1;
 
-structureZoomIn.addEventListener('click', () => {
-    scale = scale + 0.5;
-    structure.style.transform = `scale(${scale})`;
+if (structureZoomIn) {
+    structureZoomIn.addEventListener('click', () => {
+        scale = scale + 0.5;
+        structure.style.transform = `scale(${scale})`;
+    })
+}
+
+if (structureZoomOut) {
+    structureZoomOut.addEventListener('click', () => {
+        scale = scale - 0.5;
+        structure.style.transform = `scale(${scale})`;
+    })
+}
+
+
+const ratingValue = +document.querySelector('.rating-wrapper .value').innerHTML.split('%')[0];
+const ratingIcon = document.querySelector('.rating-wrapper .icon');
+
+if (ratingValue < 49) {
+    ratingIcon.classList.add('white')
+} else {
+    ratingIcon.classList.remove('white')
+}
+
+$(".progress-bar-1").loading();
+$(".progress-bar-2").loading();
+
+
+const charts = document.querySelectorAll('.level .diagrams .item');
+
+charts.forEach(i => {
+    const firstChart = i.querySelector('.first-chart');
+    const secondChart = i.querySelector('.second-chart');
+
+    const valueFirstChart = +i.querySelector('.first-chart > .value').innerHTML.split('%')[0];
+    const valueSecondChart = +i.querySelector('.second-chart > .value').innerHTML.split('%')[0];
+    
+
+    if (valueFirstChart < 80) {
+        firstChart.classList.add('color-value');
+    } else {
+        firstChart.classList.remove('color-value');
+    }
+
+    if (valueSecondChart < 40) {
+        secondChart.classList.add('color-value');
+    } else {
+        secondChart.classList.remove('color-value');
+    }
+    
 })
 
-structureZoomOut.addEventListener('click', () => {
-    scale = scale - 0.5;
-    structure.style.transform = `scale(${scale})`;
-})
+

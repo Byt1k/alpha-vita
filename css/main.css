@@ -199,17 +199,17 @@ a, button {
   color: #fff;
 }
 
-.program-filter .program-filter-wrapper .program-filter-row .item, .create-order .sales .table tr td.operation .checkbox, .create-order .receiving-order .checkbox, .create-order .group-order .checkbox {
+.program-filter .program-filter-wrapper .program-filter-row .item, .create-order .sales .table tr td.operation .checkbox, .create-order .receiving-order .checkbox, .create-order .group-order .checkbox, .admin-main .block .personal-turnover .wrapper .comparison .checkbox, .admin-main .block .turnover-structure .wrapper .comparison .checkbox, .admin-main .block .condition .wrapper .column .checkbox {
   position: relative;
 }
 
-.program-filter .program-filter-wrapper .program-filter-row .item input, .create-order .sales .table tr td.operation .checkbox input, .create-order .receiving-order .checkbox input, .create-order .group-order .checkbox input {
+.program-filter .program-filter-wrapper .program-filter-row .item input, .create-order .sales .table tr td.operation .checkbox input, .create-order .receiving-order .checkbox input, .create-order .group-order .checkbox input, .admin-main .block .personal-turnover .wrapper .comparison .checkbox input, .admin-main .block .turnover-structure .wrapper .comparison .checkbox input, .admin-main .block .condition .wrapper .column .checkbox input {
   opacity: 0;
   width: 0;
   height: 0;
 }
 
-.program-filter .program-filter-wrapper .program-filter-row .item label.check, .create-order .sales .table tr td.operation .checkbox label.check, .create-order .receiving-order .checkbox label.check, .create-order .group-order .checkbox label.check {
+.program-filter .program-filter-wrapper .program-filter-row .item label.check, .create-order .sales .table tr td.operation .checkbox label.check, .create-order .receiving-order .checkbox label.check, .create-order .group-order .checkbox label.check, .admin-main .block .personal-turnover .wrapper .comparison .checkbox label.check, .admin-main .block .turnover-structure .wrapper .comparison .checkbox label.check, .admin-main .block .condition .wrapper .column .checkbox label.check {
   width: 18px;
   height: 18px;
   background: #FFFFFF;
@@ -226,14 +226,14 @@ a, button {
           justify-content: center;
 }
 
-.program-filter .program-filter-wrapper .program-filter-row .item label.check span, .create-order .sales .table tr td.operation .checkbox label.check span, .create-order .receiving-order .checkbox label.check span, .create-order .group-order .checkbox label.check span {
+.program-filter .program-filter-wrapper .program-filter-row .item label.check span, .create-order .sales .table tr td.operation .checkbox label.check span, .create-order .receiving-order .checkbox label.check span, .create-order .group-order .checkbox label.check span, .admin-main .block .personal-turnover .wrapper .comparison .checkbox label.check span, .admin-main .block .turnover-structure .wrapper .comparison .checkbox label.check span, .admin-main .block .condition .wrapper .column .checkbox label.check span {
   width: 14px;
   height: 14px;
   border-radius: 1px;
   background-color: #fff;
 }
 
-.program-filter .program-filter-wrapper .program-filter-row .item input:checked + label.check span, .create-order .sales .table tr td.operation .checkbox input:checked + label.check span, .create-order .receiving-order .checkbox input:checked + label.check span, .create-order .group-order .checkbox input:checked + label.check span {
+.program-filter .program-filter-wrapper .program-filter-row .item input:checked + label.check span, .create-order .sales .table tr td.operation .checkbox input:checked + label.check span, .create-order .receiving-order .checkbox input:checked + label.check span, .create-order .group-order .checkbox input:checked + label.check span, .admin-main .block .personal-turnover .wrapper .comparison .checkbox input:checked + label.check span, .admin-main .block .turnover-structure .wrapper .comparison .checkbox input:checked + label.check span, .admin-main .block .condition .wrapper .column .checkbox input:checked + label.check span {
   background: #464C4C;
 }
 
@@ -4477,6 +4477,522 @@ h2 {
   transition: all .3s ease;
 }
 
+.progress-bar {
+  position: relative;
+  height: 140px;
+  width: 140px;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.progress-bar div {
+  position: absolute;
+  height: 130px;
+  width: 130px;
+  border-radius: 50%;
+}
+
+.progress-bar div span {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  left: 15px;
+  top: 15px;
+  border-radius: 50%;
+  background-color: #fff;
+  -webkit-box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.progress-bar .background {
+  background-color: none;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.progress-bar .rotate {
+  clip: rect(0 65px 130px 0);
+}
+
+.progress-bar .left {
+  clip: rect(0 65px 130px 0);
+  opacity: 1;
+}
+
+.progress-bar .right {
+  clip: rect(0 65px 130px 0);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  opacity: 0;
+}
+
+@-webkit-keyframes toggle {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes toggle {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.admin-main {
+  min-height: 90vh;
+}
+
+.admin-main .prompt .icon {
+  cursor: pointer;
+}
+
+.admin-main .title {
+  margin: 15px 0 5px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  font-size: 16px;
+}
+
+.admin-main .rating-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 35px;
+}
+
+.admin-main .rating-wrapper .rating {
+  width: 100%;
+  height: 28px;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  position: relative;
+}
+
+.admin-main .rating-wrapper .rating .progress {
+  height: 100%;
+  background: #86BFD4;
+  border-radius: 4px;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.admin-main .rating-wrapper .rating .value {
+  position: absolute;
+  top: 8px;
+  right: 5px;
+  font-size: 10px;
+  color: #2E6FA5;
+}
+
+.admin-main .rating-wrapper .rating .icon {
+  position: absolute;
+  top: 4px;
+  left: 47%;
+}
+
+.admin-main .rating-wrapper .rating .icon.white svg path {
+  fill: #86BFD4;
+}
+
+.admin-main .rating-wrapper .owner {
+  margin-left: 8px;
+  white-space: nowrap;
+  color: #2E6FA5;
+}
+
+.admin-main .block {
+  width: 100%;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  position: relative;
+}
+
+.admin-main .block .more {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.admin-main .block .personal-info {
+  padding: 24px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+
+.admin-main .block .personal-info .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 16px;
+  color: #464C4C;
+}
+
+.admin-main .block .personal-info .item .name {
+  width: 160px;
+  margin-right: 20px;
+}
+
+.admin-main .block .personal-info .item .value {
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #B0B0B0;
+  width: 90px;
+  height: 24px;
+  margin-right: 12px;
+}
+
+.admin-main .block .personal-info .item .value.option {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.admin-main .block .personal-info .item .value.option.partner {
+  color: #fff;
+  background: #1FAEF2;
+}
+
+.admin-main .block .personal-info .item .edit {
+  color: #2E6FA5;
+  font-size: 14px;
+  border-bottom: 1px solid #2E6FA5;
+}
+
+.admin-main .block .personal-turnover, .admin-main .block .turnover-structure {
+  padding: 10px 20px 20px 20px;
+}
+
+.admin-main .block .personal-turnover .head, .admin-main .block .turnover-structure .head {
+  font-size: 16px;
+  color: #081B43;
+  margin-bottom: 15px;
+}
+
+.admin-main .block .personal-turnover .wrapper, .admin-main .block .turnover-structure .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 20px;
+}
+
+.admin-main .block .personal-turnover .wrapper .progress-bar-wrapper, .admin-main .block .turnover-structure .wrapper .progress-bar-wrapper {
+  width: 140px;
+  height: 140px;
+  position: relative;
+}
+
+.admin-main .block .personal-turnover .wrapper .progress-bar-wrapper .value, .admin-main .block .turnover-structure .wrapper .progress-bar-wrapper .value {
+  position: absolute;
+  text-align: center;
+  left: 0;
+  right: 0;
+  top: 63px;
+  font-weight: 700;
+  font-size: 24px;
+  color: #2E6FA5;
+}
+
+.admin-main .block .personal-turnover .wrapper .progress-bar-wrapper .value span, .admin-main .block .turnover-structure .wrapper .progress-bar-wrapper .value span {
+  font-size: 16px;
+}
+
+.admin-main .block .personal-turnover .wrapper .comparison .checkbox, .admin-main .block .turnover-structure .wrapper .comparison .checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  color: #2E6FA5;
+}
+
+.admin-main .block .personal-turnover .wrapper .comparison .checkbox label.check, .admin-main .block .turnover-structure .wrapper .comparison .checkbox label.check {
+  min-width: 18px;
+  height: 18px;
+}
+
+.admin-main .block .personal-turnover .wrapper .datapicker input, .admin-main .block .turnover-structure .wrapper .datapicker input {
+  width: 110px;
+  height: 26px;
+  color: #B0B0B0;
+  background: #FFFFFF;
+  border: 0.5px solid #B0B0B0;
+  border-radius: 2px;
+  padding: 0 5px;
+  margin-top: 30px;
+}
+
+.admin-main .col-lg-7.d-flex.justify-content-between {
+  gap: 20px;
+}
+
+.admin-main .col-lg-7.d-flex.justify-content-between .block {
+  width: auto;
+}
+
+.admin-main .block .condition {
+  padding: 25px 20px;
+}
+
+.admin-main .block .condition .head {
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.admin-main .block .condition .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 60px;
+}
+
+.admin-main .block .condition .wrapper .column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30px;
+  width: 90px;
+}
+
+.admin-main .block .condition .wrapper .column .checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #2E6FA5;
+}
+
+.admin-main .block .condition .wrapper .column .checkbox label.check {
+  min-width: 18px;
+  height: 18px;
+  border: 0.5px solid #2E6FA5;
+}
+
+.admin-main .block .condition .wrapper .column .checkbox input {
+  position: absolute;
+}
+
+.admin-main .block .condition .wrapper .column .checkbox input:checked + label.check span {
+  background: #2E6FA5;
+}
+
+.admin-main .block .condition .wrapper .column .checkbox.disable {
+  color: #C4C4C4;
+}
+
+.admin-main .block .condition .wrapper .column .checkbox.disable label.check {
+  border: 1px solid #C4C4C4;
+}
+
+.admin-main .block .condition .wrapper .column .checkbox.disable input:checked + label.check span {
+  background: #fff;
+}
+
+.admin-main .block .level {
+  padding: 25px 20px;
+}
+
+.admin-main .block .level .head {
+  font-size: 16px;
+  margin-bottom: 3px;
+}
+
+.admin-main .block .level .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 45px;
+}
+
+.admin-main .block .level .wrapper .diagrams {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+
+.admin-main .block .level .wrapper .diagrams .item {
+  width: 42px;
+}
+
+.admin-main .block .level .wrapper .diagrams .item .wrap {
+  height: 130px;
+  position: relative;
+}
+
+.admin-main .block .level .wrapper .diagrams .item .wrap .first-chart {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 42px;
+  height: 130px;
+  text-align: center;
+}
+
+.admin-main .block .level .wrapper .diagrams .item .wrap .first-chart > .progress {
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  background: #86BFD4;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 4px 4px 0 0;
+}
+
+.admin-main .block .level .wrapper .diagrams .item .wrap .first-chart > .value {
+  margin-top: 21px;
+  color: #fff;
+  position: relative;
+  font-size: 12px;
+}
+
+.admin-main .block .level .wrapper .diagrams .item .wrap .first-chart.color-value > .value {
+  color: #86BFD4;
+}
+
+.admin-main .block .level .wrapper .diagrams .item .wrap .first-chart .second-chart {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 31px;
+  height: 93px;
+}
+
+.admin-main .block .level .wrapper .diagrams .item .wrap .first-chart .second-chart .progress {
+  border-radius: 4px 4px 0 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #2E6FA5;
+}
+
+.admin-main .block .level .wrapper .diagrams .item .wrap .first-chart .second-chart .value {
+  font-size: 12px;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 36px;
+  color: #fff;
+  text-align: center;
+}
+
+.admin-main .block .level .wrapper .diagrams .item .wrap .first-chart .second-chart.color-value > .value {
+  color: #2E6FA5;
+}
+
+.admin-main .block .level .wrapper .diagrams .item .month {
+  text-align: center;
+  margin-top: 3px;
+  color: #2E6FA5;
+}
+
+.admin-main .block .level .wrapper .designations {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 36px;
+}
+
+.admin-main .block .level .wrapper .designations .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+
+.admin-main .block .level .wrapper .designations .item div {
+  min-width: 18px;
+  height: 18px;
+  border-radius: 2px;
+}
+
+.admin-main .block .level .wrapper .designations .item.first div {
+  background-color: #86BFD4;
+}
+
+.admin-main .block .level .wrapper .designations .item.second div {
+  background-color: #2E6FA5;
+}
+
+.admin-main .block .level .wrapper .designations .item span {
+  color: #2E6FA5;
+}
+
 @media screen and (max-width: 1800px) {
   .sidebar-wrapper .sidebar .menu {
     width: 210px;
@@ -4498,6 +5014,20 @@ h2 {
   }
   .our-online .text p b br {
     display: none;
+  }
+  .admin-main .block .personal-info .item {
+    font-size: 14px;
+  }
+  .admin-main .block .personal-info .item .name {
+    margin-right: 15px;
+    width: 140px;
+  }
+  .admin-main .row:nth-child(2) {
+    overflow-x: auto;
+    padding-bottom: 5px;
+  }
+  .admin-main .block .head {
+    font-size: 14px !important;
   }
 }
 
@@ -4601,6 +5131,9 @@ h2 {
   .create-order .sales .table tr td.name {
     width: 160px;
   }
+  .admin-main .block {
+    margin-bottom: 20px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -4696,5 +5229,40 @@ h2 {
   }
   .my-structure .wrapper .zoom {
     display: none;
+  }
+  .admin-main .rating-wrapper .rating .icon {
+    left: 43%;
+  }
+  .admin-main .rating-wrapper .owner {
+    display: none;
+  }
+  .admin-main .col-lg-7.d-flex.justify-content-between {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .admin-main .col-lg-7.d-flex.justify-content-between .block .comparison .checkbox {
+    gap: 5px;
+  }
+  .admin-main .block {
+    height: auto !important;
+  }
+  .admin-main .block .condition .wrapper {
+    gap: 30px;
+  }
+  .admin-main .block .level .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 25px;
+  }
+  .admin-main .block .level .wrapper .designations {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 20px;
   }
 }
