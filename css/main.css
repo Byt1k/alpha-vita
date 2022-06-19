@@ -149,7 +149,7 @@ a, button {
   color: #081B43;
 }
 
-.popular .all-products, .subscribe .subscribeWrapper .form button, .product-cart .order-info .checkout {
+.popular .all-products, .subscribe .subscribeWrapper .form button, .product-cart .order-info .checkout, .auth .actions a.sign-up {
   font-size: 14px;
   color: #fff;
   display: -webkit-box;
@@ -169,12 +169,12 @@ a, button {
   text-transform: uppercase;
 }
 
-.popular .all-products:hover, .subscribe .subscribeWrapper .form button:hover, .product-cart .order-info .checkout:hover {
+.popular .all-products:hover, .subscribe .subscribeWrapper .form button:hover, .product-cart .order-info .checkout:hover, .auth .actions a.sign-up:hover {
   background-color: #fff;
   color: #081B43;
 }
 
-.catalog a, .actual-news .btn, .product-cart .order-info .back {
+.catalog a, .actual-news .btn, .product-cart .order-info .back, .auth .actions a.sign-in {
   font-size: 14px;
   color: #081B43;
   display: -webkit-box;
@@ -194,7 +194,7 @@ a, button {
   text-transform: uppercase;
 }
 
-.catalog a:hover, .actual-news .btn:hover, .product-cart .order-info .back:hover {
+.catalog a:hover, .actual-news .btn:hover, .product-cart .order-info .back:hover, .auth .actions a.sign-in:hover {
   background-color: #081B43;
   color: #fff;
 }
@@ -5264,5 +5264,37 @@ h2 {
         -ms-flex-direction: row;
             flex-direction: row;
     gap: 20px;
+  }
+}
+
+.auth {
+  height: calc(100vh - 205px);
+}
+
+.auth .actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 25px;
+}
+
+.auth .actions a {
+  width: 180px;
+  height: 50px;
+}
+
+@media screen and (max-width: 992px) {
+  .auth {
+    height: calc(100vh - 121px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .auth {
+    height: calc(100vh - 162px);
   }
 }
