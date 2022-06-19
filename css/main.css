@@ -5356,6 +5356,41 @@ h2 {
   width: 230px;
 }
 
+.confirm .form {
+  width: 100%;
+  gap: 0;
+}
+
+.confirm .form .title {
+  width: 490px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 18px;
+  line-height: 21px;
+  color: #9C9C9C;
+}
+
+.confirm .form .confirm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 50px 0 70px 0;
+}
+
+.confirm .form .confirm input {
+  font-family: 'Roboto Mono', monospace;
+  display: block;
+  width: 300px;
+  height: 62px;
+  background: url(../img/input-confirm.svg) no-repeat left bottom;
+  margin-left: 40px;
+  font-size: 45px;
+  letter-spacing: 30px;
+}
+
 @media screen and (max-width: 992px) {
   .auth, .auth .container, .auth .container .row {
     min-height: calc(100vh - 201px);
@@ -5367,6 +5402,9 @@ h2 {
     min-height: calc(100vh - 242px);
   }
   .auth .form {
+    width: 100%;
+  }
+  .confirm .form .title {
     width: 100%;
   }
 }
