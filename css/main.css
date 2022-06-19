@@ -149,7 +149,7 @@ a, button {
   color: #081B43;
 }
 
-.popular .all-products, .subscribe .subscribeWrapper .form button, .product-cart .order-info .checkout, .auth .actions a.sign-up {
+.popular .all-products, .subscribe .subscribeWrapper .form button, .product-cart .order-info .checkout, .auth .actions a.sign-up, .auth .form .send {
   font-size: 14px;
   color: #fff;
   display: -webkit-box;
@@ -169,7 +169,7 @@ a, button {
   text-transform: uppercase;
 }
 
-.popular .all-products:hover, .subscribe .subscribeWrapper .form button:hover, .product-cart .order-info .checkout:hover, .auth .actions a.sign-up:hover {
+.popular .all-products:hover, .subscribe .subscribeWrapper .form button:hover, .product-cart .order-info .checkout:hover, .auth .actions a.sign-up:hover, .auth .form .send:hover {
   background-color: #fff;
   color: #081B43;
 }
@@ -5267,8 +5267,12 @@ h2 {
   }
 }
 
+.auth, .auth .container, .auth .container .row {
+  min-height: calc(100vh - 285px);
+}
+
 .auth {
-  height: calc(100vh - 205px);
+  padding: 40px 0;
 }
 
 .auth .actions {
@@ -5287,14 +5291,82 @@ h2 {
   height: 50px;
 }
 
+.auth .form {
+  width: 380px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 25px;
+}
+
+.auth .form .field span {
+  display: block;
+  color: #9C9C9C;
+  margin-bottom: 7px;
+}
+
+.auth .form .field input {
+  width: 100%;
+  height: 42px;
+  padding: 0 10px;
+  border: 1px solid #9C9C9C;
+  border-radius: 3px;
+}
+
+.auth .form .field input::-webkit-input-placeholder {
+  color: rgba(156, 156, 156, 0.4);
+}
+
+.auth .form .field input:-ms-input-placeholder {
+  color: rgba(156, 156, 156, 0.4);
+}
+
+.auth .form .field input::-ms-input-placeholder {
+  color: rgba(156, 156, 156, 0.4);
+}
+
+.auth .form .field input::placeholder {
+  color: rgba(156, 156, 156, 0.4);
+}
+
+.auth .form .captcha {
+  height: 75px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.auth .form .captcha img {
+  max-width: 100%;
+}
+
+.auth .form .send {
+  margin: 0 auto;
+  height: 50px;
+}
+
+.sign-up .form .send {
+  width: 230px;
+}
+
 @media screen and (max-width: 992px) {
-  .auth {
-    height: calc(100vh - 121px);
+  .auth, .auth .container, .auth .container .row {
+    min-height: calc(100vh - 201px);
   }
 }
 
 @media screen and (max-width: 767px) {
-  .auth {
-    height: calc(100vh - 162px);
+  .auth, .auth .container, .auth .container .row {
+    min-height: calc(100vh - 242px);
+  }
+  .auth .form {
+    width: 100%;
   }
 }

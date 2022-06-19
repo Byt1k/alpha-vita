@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hi | Alpha Vita</title>
+    <title>Sign Up | Alpha Vita</title>
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     
     <link href="https://fonts.googleapis.com/css2?family=Inter&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
@@ -128,14 +128,32 @@
             </a>
         </div>     
     </header>
-    <section class="auth">
-        <div class="container ">
+    <section class="auth sign-up">
+        <div class="container">
             <div class="row">
                 <div class="col-12 d-flex align-items-center justify-content-center ">
-                    <div class="actions">
-                        <a href="#" class="sign-in">ВОЙТИ</a>
-                        <a href="#" class="sign-up">регистрация</a>
-                    </div>
+                    <form class="form">
+                        <div class="field">
+                            <span>Ваш эл. адрес</span>
+                            <input type="text" placeholder="Email...">
+                        </div>
+                        <div class="field">
+                            <span>Ваш номер телефона</span>
+                            <input type="text" placeholder="+7...">
+                        </div>
+                        <div class="field">
+                            <span>Придумайте пароль</span>
+                            <input type="password" placeholder="Ваш пароль...">
+                        </div>
+                        <div class="field">
+                            <span>Повторите пароль</span>
+                            <input type="password" placeholder="Повтор пароля...">
+                        </div>
+                        <div class="captcha">
+                            <img src="img/captcha.png" alt="captcha">
+                        </div>
+                        <button class="send">зарегистрироваться</button>
+                    </form>
                 </div>
             </div>
         </div>
