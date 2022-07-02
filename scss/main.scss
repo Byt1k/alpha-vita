@@ -4462,6 +4462,219 @@ h2 {
     }
 }
 
+.alphavita {
+    .title {
+        font-weight: 700;
+        font-size: 36px;
+        text-align: center;
+        padding: 45px 0 30px 0;
+        margin-bottom: 60px;
+    }
+
+    .wrapper {
+        display: flex;
+
+        .item {
+            width: 20%;
+        
+            .top {
+                height: 192px;
+            }
+
+            .center {
+                width: 172px;
+                height: 172px;
+                border-radius: 50%;
+                background: #FFFFFF;
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto;
+                position: relative;
+
+                &::before {
+                    content: '';
+                    height: 40px;
+                    width: 2px;
+                    background: #EEEFF1;
+                    position: absolute;
+                }
+
+                &::after {
+                    content: '';
+                    width: 60px;
+                    height: 2px;
+                    background: #EEEFF1;
+                    position: absolute;
+                    right: -60px;
+                }
+            }
+
+            .bottom {
+                margin-top: 39px;
+            }
+
+            .top, .bottom {
+                font-size: 14px;
+                line-height: 16px;
+                text-align: center;
+                width: 266px;
+                margin-left: -17px;
+                color: #29383E;
+            }
+
+            &:nth-child(2n-1) {
+                .center {
+                    &::before {
+                        top: -40px;
+                    }
+                }
+            }
+
+            &:nth-child(2n) {
+                .center {
+                    &::before {
+                        bottom: -40px;
+                    }
+                }
+            }
+
+            &:last-child .center {
+                &::before {
+                    height: 30px;
+                    top: -30px;
+                }
+
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.about-page__catalog {
+    .owl-dots {
+        margin-top: 20px;
+    }
+}
+
+.about-cooperation {
+    padding-bottom: 210px;
+
+    .title {
+        font-weight: 700;
+        font-size: 36px;
+        text-align: center;
+        padding: 45px 0 30px 0;
+        margin-bottom: 116px;
+    }
+
+    .wrapper {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        width: 386px;
+        height: 386px;
+        border-radius: 50%;
+        background: #fff url(../img/cooperation-bg.png) no-repeat center center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        color: #fff;
+        margin: 0 auto;
+
+        .text {
+            font-weight: 700;
+            width: 143px;   
+            text-align: center;
+        }
+        
+        .item {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            &.reverse {
+                flex-direction: row-reverse;
+            }
+
+            .icon {
+                min-width: 120px;
+                height: 120px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+                background: #fff;
+            }
+
+            p {
+                font-size: 16px;
+                line-height: 19px;
+                color: #000000;
+            }
+
+            &.dark {
+                .icon {
+                    background: #081B43;
+                    border: 1px solid #FFFFFF;
+                }
+            }
+
+            &:nth-child(1) {
+                top: -14px;
+                right: 248px;
+
+                p {
+                    width: 336px;
+                }
+            }
+    
+            &:nth-child(2) {
+                top: 197px;
+                right: 317px;
+
+                p {
+                    width: 280px;
+                }
+            }
+    
+            &:nth-child(3) {
+                top: 323px;
+                left: 157px;
+
+                p {
+                    margin-top: 70px;
+                    width: 280px;
+                }
+            }
+    
+            &:nth-child(4) {
+                top: -28px;
+                left: 231px;
+
+                p {
+                    width: 343px;
+                }
+            }
+    
+            &:nth-child(5) {
+                top: 157px;
+                left: 316px;
+
+                p {
+                    width: 280px;
+                }
+            }
+        }
+    }
+}
+
 .vectors {
     padding: 30px 0 40px 0;
 
