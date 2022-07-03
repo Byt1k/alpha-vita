@@ -6936,6 +6936,41 @@ h2 {
   bottom: 0;
 }
 
+.capabilities .menu {
+  position: absolute;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 13px;
+}
+
+.capabilities .menu.fixed {
+  position: fixed;
+  top: 20px;
+}
+
+.capabilities .menu li a {
+  font-size: 14px;
+  line-height: 16px;
+  color: #464C4C;
+  display: block;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.capabilities .menu li a.active, .capabilities .menu li a:hover {
+  color: #FE6E27;
+}
+
 @media screen and (max-width: 1200px) {
   .alphavita .wrapper {
     -ms-flex-wrap: wrap;
@@ -7028,6 +7063,9 @@ h2 {
     margin-top: 0 !important;
     width: 100% !important;
   }
+  .capabilities .menu {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 992px) {
@@ -7051,6 +7089,134 @@ h2 {
   }
   .vectors .item .right {
     padding: 15px;
+  }
+  .partnership .col-xl-9 .left .title {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .partnership .col-xl-9 .left .wrapper .item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 8px;
+  }
+  .partnership .col-xl-9 .left .wrapper .item .number {
+    margin: 0;
+  }
+  .partnership .col-xl-9 .left .wrapper .item p {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .first-step .wrapper .item {
+    width: 70%;
+    gap: 34px;
+  }
+  .first-step .wrapper .item:nth-child(2n) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    margin-left: auto;
+  }
+  .first-step .wrapper .item:nth-child(2n) p {
+    text-align: right;
+  }
+  .statuses .bg {
+    max-width: 520px;
+  }
+  .referal .wrapper .right .text {
+    padding: 20px 11px;
+    font-size: 20px;
+    line-height: 23px;
+  }
+  .structural-bonus2 .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .structural-bonus2 .wrapper .left .text {
+    width: 100%;
+  }
+  .structural-bonus2 .wrapper .right {
+    text-align: center;
+  }
+  .structural-bonus2 .wrapper .right img {
+    position: relative;
+  }
+  .infinity-bonus .label {
+    margin: 12px 0;
+  }
+  .infinity-bonus .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .infinity-bonus .wrapper .desc {
+    position: relative;
+    width: 100%;
+  }
+  .infinity-bonus .wrapper .levels .main-img {
+    max-width: 80%;
+    top: 34px;
+  }
+  .infinity-bonus .wrapper .levels-desc .item {
+    margin-left: 0 !important;
+    width: 100%;
+    height: auto;
+    padding: 10px 0;
+  }
+  .infinity-bonus .wrapper .levels-desc .item span {
+    font-weight: 700;
+  }
+  .income .wrapper .example {
+    margin-top: 0;
+  }
+  .income .wrapper .center-block .woman {
+    display: none;
+  }
+  .income .wrapper .center-block img {
+    margin-top: 370px;
+  }
+  .fast-start .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .fast-start .wrapper .left, .fast-start .wrapper .right {
+    width: 100%;
+  }
+  .fast-start .wrapper .left .text {
+    width: 100%;
+  }
+  .fast-start .wrapper .left .double-bonus {
+    padding-left: 0;
+    margin-bottom: 20px;
+  }
+  .fast-start .wrapper .left .double-bonus .arrow {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  .fast-start .wrapper .left .double-bonus .arrow img:first-child {
+    display: block;
+  }
+  .fast-start .wrapper .left .double-bonus .arrow img:last-child {
+    display: block;
+    margin-left: -10px;
+  }
+  .fast-start .wrapper .right .item .text {
+    width: 100%;
+  }
+  .bussiness .bg {
+    max-width: 430px;
   }
 }
 

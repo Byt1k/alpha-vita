@@ -273,9 +273,11 @@ const adminBurger = document.querySelector('.admin-header .burger');
 const adminSidebar = document.querySelector('.sidebar .menu');
 
 
-adminBurger.addEventListener('click', () => {
-    adminSidebar.classList.toggle('active');
-})
+if (adminBurger) {
+    adminBurger.addEventListener('click', () => {
+        adminSidebar.classList.toggle('active');
+    })
+}
 
 
 const avaArr = document.querySelectorAll('.structure .ava');
@@ -312,13 +314,48 @@ if (structureZoomOut) {
 }
 
 
-const ratingValue = +document.querySelector('.rating-wrapper .value').innerHTML.split('%')[0];
+let menu = document.querySelector('.capabilities .menu')
+
+window.addEventListener('scroll', () => {
+    let scrollDistance = window.scrollY + 200;
+    
+    if (window.scrollY >= 200) {
+        menu.classList.add('fixed')
+    } else {
+        menu.classList.remove('fixed')
+    }
+    
+    document.querySelectorAll('.capabilities-section').forEach((el, i) => {
+        if (el.offsetTop  <= scrollDistance) {
+            document.querySelectorAll('.capabilities .menu a').forEach(el => {
+                if (el.classList.contains('active')) {
+                    el.classList.remove('active')
+                }
+            })
+            document.querySelectorAll('.capabilities .menu li')[i].querySelector('a').classList.add('active');
+        }
+    })
+
+
+})
+
+
+
+// 
+const ratingWrapperValue = +document.querySelector('.rating-wrapper .value');
+let ratingValue;
+
+if (ratingWrapperValue) {
+    ratingValue = ratingWrapperValue.innerHTML.split('%')[0];
+}
 const ratingIcon = document.querySelector('.rating-wrapper .icon');
 
-if (ratingValue < 49) {
-    ratingIcon.classList.add('white')
-} else {
-    ratingIcon.classList.remove('white')
+if (ratingIcon) {
+    if (ratingValue < 49) {
+        ratingIcon.classList.add('white')
+    } else {
+        ratingIcon.classList.remove('white')
+    }
 }
 
 $(".progress-bar-1").loading();
@@ -348,5 +385,3 @@ charts.forEach(i => {
     }
     
 })
-
-

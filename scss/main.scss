@@ -5710,6 +5710,39 @@ h2 {
     }
 }
 
+.capabilities {
+
+    .menu {
+        position: absolute;
+        background: #FFFFFF;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 13px;
+
+        &.fixed {
+            position: fixed;
+            top: 20px;
+        }
+        
+        li {
+            a {
+                font-size: 14px;
+                line-height: 16px;
+                color: #464C4C;
+                display: block;
+                transition: all .3s ease;
+
+                &.active, &:hover {
+                    color: $mainColor;
+                }
+            }
+        }
+    }
+}
+
 
 @media screen and (max-width: 1200px) {
     .alphavita {
@@ -5794,7 +5827,7 @@ h2 {
                 .icon {
                     margin-bottom: 20px;
                 }
-                
+
                 p {
                     margin-top: 0 !important;
                     width: 100% !important;
@@ -5802,6 +5835,11 @@ h2 {
             }
         }
     }
+
+    .capabilities .menu {
+        display: none;
+    }
+
 }
 
 @media screen and (max-width: 992px) {
@@ -5835,6 +5873,200 @@ h2 {
             .right {
                 padding: 15px;
             }
+        }
+    }
+
+
+    .partnership {
+        .col-xl-9 {
+            .left {
+                .title {
+                    font-size: 24px;
+                    line-height: 28px;
+                }
+
+                .wrapper {
+                    .item {
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+
+                        .number {
+                            margin: 0;
+                        }
+
+                        p {
+                            font-size: 16px;
+                            line-height: 19px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    // .first-step, .statuses, .referal, .structural-bonus, .infinity-bonus, .income, .fast-start, .bussiness {
+    //     .title, .second-title {
+    //         font-size: 18px;
+    //         line-height: 20px;
+    //     }
+    // }
+
+    .first-step {
+        .wrapper {
+            .item {
+                width: 70%;
+                gap: 34px;
+
+                &:nth-child(2n) {
+                    flex-direction: row-reverse;
+                    margin-left: auto;
+
+                    p {
+                        text-align: right;
+                    }
+                }
+            }
+        }
+    }
+
+    .statuses {
+        .bg {
+            max-width: 520px;
+        }
+    }
+
+    .referal {
+        .wrapper {
+            .right {
+                .text {
+                    padding: 20px 11px;
+                    font-size: 20px;
+                    line-height: 23px;
+                }
+            }
+        }
+    }
+
+    .structural-bonus2 {
+        .wrapper {
+            flex-direction: column;
+
+            .left {
+                .text {
+                    width: 100%;
+                }
+            }
+
+            .right {
+                text-align: center;
+                img {
+                    position: relative;
+                }
+            }
+        }
+    }
+
+    .infinity-bonus {
+        .label {
+            margin: 12px 0;
+        }
+
+        .wrapper {
+            flex-direction: column;
+
+            .desc {
+                position: relative;
+                width: 100%;
+            }
+
+            .levels {
+                .main-img {
+                    max-width: 80%;
+                    top: 34px;
+                }
+            }
+
+            .levels-desc {
+                .item {
+                    margin-left: 0 !important;
+                    width: 100%;
+                    height: auto;
+                    padding: 10px 0;
+
+                    span {
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+
+    .income {
+        .wrapper {
+            .example {
+                margin-top: 0;
+            }
+
+            .center-block {
+                .woman {
+                    display: none;
+                }
+
+                img {
+                    margin-top: 370px;
+                }
+            }
+        }
+    }
+
+    .fast-start {
+        .wrapper {
+            flex-direction: column;
+
+            .left, .right {
+                width: 100%;
+            }
+
+            .left {
+                .text {
+                    width: 100%;
+                }
+
+                .double-bonus {
+                    padding-left: 0;
+                    margin-bottom: 20px;
+
+                    .arrow {
+                        display: flex;
+                        transform: rotate(90deg);
+                        img {
+                            &:first-child {
+                                display: block;
+                            }
+                            &:last-child {
+                                display: block;
+                                margin-left: -10px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .right {
+                .item {
+                    .text {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    .bussiness {
+        .bg {
+            max-width: 430px;
         }
     }
 }
@@ -5873,6 +6105,9 @@ h2 {
             justify-content: center;
         }
     }
+
+
+
 
 }
 
