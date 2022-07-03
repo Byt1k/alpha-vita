@@ -6935,3 +6935,154 @@ h2 {
   right: 0;
   bottom: 0;
 }
+
+@media screen and (max-width: 1200px) {
+  .alphavita .wrapper {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 30px;
+  }
+  .alphavita .wrapper .item {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  .alphavita .wrapper .item:nth-child(2n-1) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .alphavita .wrapper .item:nth-child(2n-1) .bottom {
+    display: none;
+  }
+  .alphavita .wrapper .item .top {
+    height: auto;
+    margin-left: 0;
+  }
+  .alphavita .wrapper .item .center {
+    margin-bottom: 20px;
+    width: 120px;
+    height: 120px;
+  }
+  .alphavita .wrapper .item .center::after, .alphavita .wrapper .item .center::before {
+    display: none;
+  }
+  .alphavita .wrapper .item .bottom {
+    margin: 0;
+  }
+  .alphavita .wrapper .item .top, .alphavita .wrapper .item .bottom {
+    width: 100%;
+    text-align: left;
+  }
+  .alphavita .wrapper .item .top span, .alphavita .wrapper .item .bottom span {
+    font-weight: 700;
+    font-size: 20px;
+  }
+  .about-cooperation {
+    padding-bottom: 0;
+  }
+  .about-cooperation .title {
+    margin-bottom: 30px;
+  }
+  .about-cooperation .wrapper {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+    background: #fff;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .about-cooperation .wrapper .item {
+    position: relative;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  .about-cooperation .wrapper .item .icon {
+    margin-bottom: 20px;
+  }
+  .about-cooperation .wrapper .item p {
+    margin-top: 0 !important;
+    width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .about-links {
+    padding-bottom: 0;
+  }
+  .about-links .about-links__wrapper {
+    overflow: auto;
+    gap: 30px;
+    padding-bottom: 40px;
+  }
+  .about-links .about-links__wrapper .item span {
+    white-space: nowrap;
+  }
+  .alphavita .title {
+    margin-bottom: 30px;
+  }
+  .vectors .item {
+    height: auto;
+    gap: 7px;
+  }
+  .vectors .item .right {
+    padding: 15px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .vectors .item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .vectors .item .left {
+    width: 100%;
+    height: 140px;
+  }
+  .our-technologies .wrapper {
+    gap: 0;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .our-technologies .wrapper .item {
+    width: 97px;
+    height: 97px;
+  }
+  .our-technologies .text {
+    width: 100%;
+  }
+  .world-certificates .wrapper {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}

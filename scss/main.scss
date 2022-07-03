@@ -4772,12 +4772,6 @@ h2 {
         display: flex;
         justify-content: center;
         gap: 26px;
-
-        .item {
-            img {
-
-            }
-        }
     }
 }
 
@@ -5715,3 +5709,171 @@ h2 {
         bottom: 0;
     }
 }
+
+
+@media screen and (max-width: 1200px) {
+    .alphavita {
+        .wrapper {
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+
+            .item {
+                width: 100%;
+                margin-bottom: 40px;
+
+                &:nth-child(2n-1) {
+                    display: flex;
+                    flex-direction: column-reverse;
+
+                    .bottom {
+                        display: none;
+                    }
+                }
+
+                .top {
+                    height: auto;
+                    margin-left: 0;
+                }
+
+                .center {
+                    margin-bottom: 20px;
+                    width: 120px;
+                    height: 120px;
+
+                    &::after, &::before {
+                        display: none;
+                    }
+
+                }
+
+                .bottom {
+                    margin: 0;
+                }
+
+                .top, .bottom {
+                    width: 100%;
+                    text-align: left;
+
+                    span {
+                        font-weight: 700;
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    .about-cooperation {
+        padding-bottom: 0;
+
+        .title {
+            margin-bottom: 30px;
+        }
+
+        .wrapper {
+            width: 100%;
+            height: auto;
+            border-radius: 0;
+            background: #fff;
+            box-shadow: none;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-direction: column;
+
+            .item {
+                position: relative;
+                top: 0 !important;
+                left: 0 !important;
+                right: 0 !important;
+                bottom: 0 !important;
+                flex-direction: column !important;
+                width: 100%;
+                margin-bottom: 40px;
+
+                .icon {
+                    margin-bottom: 20px;
+                }
+                
+                p {
+                    margin-top: 0 !important;
+                    width: 100% !important;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .about-links {
+        padding-bottom: 0;
+
+        .about-links__wrapper {
+            overflow: auto;
+            gap: 30px;
+            padding-bottom: 40px;
+
+            .item {
+                span {
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+
+    .alphavita {
+        .title {
+            margin-bottom: 30px;
+        }
+    }
+
+    .vectors {
+        .item {
+            height: auto;
+            gap: 7px;
+            
+            .right {
+                padding: 15px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .vectors {
+        .item {
+            flex-direction: column;
+
+            .left {
+                width: 100%;
+                height: 140px;
+            }
+        }
+    } 
+
+    .our-technologies {
+        .wrapper {
+            gap: 0;
+            justify-content: space-between;
+            
+            .item {
+                width: 97px;
+                height: 97px;
+            }
+        }
+
+        .text {
+            width: 100%;
+        }
+    }
+
+    .world-certificates {
+        .wrapper {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+
+}
+
+
