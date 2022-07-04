@@ -5266,10 +5266,11 @@ h2 {
 
             img {
                 position: absolute;
-                top: 50px;
+                top: 70px;
                 right: 0;
                 width: 520px;
                 height: auto;
+                max-width: 100%;
             }
         }
     }
@@ -5327,7 +5328,7 @@ h2 {
                 
                 p {
                     color: #fff;
-                    font-size: 24px;
+                    font-size: 20px;
                     font-weight: 500;
                     text-transform: uppercase;
                     text-align: right;
@@ -5905,14 +5906,6 @@ h2 {
         }
     }
 
-
-    // .first-step, .statuses, .referal, .structural-bonus, .infinity-bonus, .income, .fast-start, .bussiness {
-    //     .title, .second-title {
-    //         font-size: 18px;
-    //         line-height: 20px;
-    //     }
-    // }
-
     .first-step {
         .wrapper {
             .item {
@@ -5962,6 +5955,7 @@ h2 {
             .right {
                 text-align: center;
                 img {
+                    top: 0;
                     position: relative;
                 }
             }
@@ -6107,8 +6101,493 @@ h2 {
     }
 
 
+    .first-step, .statuses, .referal, .structural-bonus, .infinity-bonus, .income, .fast-start, .bussiness {
+        .title, .second-title {
+            font-size: 16px;
+            line-height: 19px;
+            font-weight: 700;
+        }
+    }
+    
+    .partnership {
+        .col-xl-9 {
+            position: relative;
+
+            .left {
+                max-width: 220px;
+
+                .title {
+                    font-size: 16px;
+                    line-height: 19px;
+                    font-weight: 700;
+                }
+
+                .text {
+                    font-size: 14px;
+                    line-height: 16px;
+                    margin: 10px 0 16px 0;
+                }
+
+                .wrapper {
+                    gap: 20px;
+
+                    .item {
+                        .number {
+                            min-width: 39px;
+                        }
+
+                        p {
+                            font-size: 14px;
+                            line-height: 16px;
+                            max-width: 160px;
+                        }
+                    }
+                }
+            }
+
+            .right {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 170px;
+            }
+        }
+    }
+
+    .first-step {
+        padding-bottom: 30px;
+
+        .second-title {
+            font-size: 16px;
+            line-height: 19px;
+            margin: 2px 0 12px 0;
+        }
+
+        .text {
+            font-size: 14px;
+        }
+
+        .wrapper {
+            margin-top: 43px;
+            row-gap: 28px;
+
+            .item {
+                width: 100%;
+                gap: 10px;
+
+                .icon {
+                    min-width: 110px;
+                    height: 110px;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                p {
+                    font-size: 18px;
+                    line-height: 20px;
+                }
+            }
+        }
+
+        .desc {
+            width: 97%;
+            margin: 50px auto 0 auto;
+            text-align: center;
+
+            p {
+                b {
+                    display: inline;
+                }
+
+                br {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .statuses {
+        padding-top: 40px;
+        padding-bottom: 75px;
+        background: url(../img/statuses-bg-mobile.png) no-repeat bottom center;
+
+        .title {
+            text-align: center;
+        }
+
+        .statuses__row {
+            flex-direction: column;
+
+            .activities {
+                flex-wrap: wrap;
+                justify-content: center;
+
+                .title {
+                    width: 100%;
+                    color: $mainColor;
+                    margin-bottom: 12px;
+
+                    br {display: none;}
+                }
+
+                .sum {
+                    margin: 0;
+                    width: 82px;
+                    height: 50px;
+
+                    p {
+                        font-size: 36px;
+                    }
+
+                    span {
+                        margin-top: 10px;
+                        font-size: 20px;
+                    }
+                }
+
+                .bottles {
+                    height: 56px;
+
+                    img {
+                        height: 100%;
+                    }
+                }
+            }
+
+            .blue-text {
+                position: static;
+                width: 100%;
+                text-align: center;
+                margin: 89px 0 80px 0;
+                font-size: 16px;
+                line-height: 19px;
+            }
+        }
+
+        .text {
+            font-size: 16px;
+            line-height: 19px;
+            width: 100%;
+            text-align: center;
+            margin: 0 0 42px 0;
+        }
+
+        .bg {
+            display: none;
+        }
+
+        .btn-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    .referal {
+        padding-bottom: 0;
+
+        .referal__title {
+            .title {
+                width: 50%;
+            }
+
+            .bonus {
+               width: 147px;
+               height: 42px;
+                font-size: 24px;
+            }
+        }
+
+        .second-title {
+            margin: 30px 0;
+            font-size: 16px;
+            line-height: 19px;
+        }
+
+        .options {
+            gap: 20px;
+
+            .item {
+                width: 100%;
+
+                .top {
+                    padding: 10px 0;
+                    font-size: 18px;
+                    line-height: 21px;
+                    height: auto;
+                }
+
+                .bottom {
+                    padding: 15px 0;
+                    font-size: 24px;
+                    line-height: 28px;
+                    height: auto;
+
+                    br {display: none;}
+                }
+            }
+        }
+
+        .wrapper {
+            flex-direction: column-reverse;
+
+            .right {
+                width: 100%;
+
+                .arrows {
+                    width: 60%;
+                    margin: 0 auto;
+                    display: flex;
+                    justify-content: space-between;
+
+                    .icon {
+                        display: block !important;
+                    }
+                }
+
+                .text {
+                    padding: 7px 15px;
+                    height: auto;
+                }
+            }
+
+            .left {
+
+                .second-title {
+                    font-size: 16px;
+                    line-height: 19px;
+                    width: 90%;
+                    margin: 44px 0 33px 0;
+                }
+
+                .item {
+                    p {
+                        font-size: 16px;
+                        line-height: 19px;
+                    }
+                }
+            }
+        }
+    }
+
+    .structural-bonus1 {
+        padding-top: 40px;
+        padding-bottom: 0;
+
+        .wrapper {
+            flex-direction: column;
+            gap: 0;
+
+            .left {
+                .second-title {
+                    font-size: 16px;
+                    line-height: 19px;
+                    margin-top: 20px;
+                }
+
+                .label {
+                    margin: 20px 0 30px 0;
+                    padding: 18px 0;
+                    width: 100%;
+                    height: auto;
+                }
+
+                .text {
+                    font-size: 16px;
+                    line-height: 16px;
+                    width: 100%;
+                }
+            }
+
+            .right {
+                .head {
+                    font-size: 16px;
+                    line-height: 19px;
+                    font-weight: 700;
+                    margin: 41px 0 25px 0;
+                }
+
+                .btn-wrapper {
+                    justify-content: center;
+                }
+
+                p {
+                    text-align: center;
+                    font-size: 16px;
+                    line-height: 19px;
+                }
 
 
+            }
+        }
+    }
+
+    .structural-bonus2 {
+        padding-top: 40px;
+        padding-bottom: 0;
+
+        .wrapper {
+            .left {
+                .second-title {
+                    margin-top: 16px;
+                } 
+
+                .btn-wrapper {
+                    margin: 35px 0 30px 0;
+                    justify-content: center;
+                }
+
+                .text {
+                    font-size: 14px;
+                    line-height: 16px;
+                }
+            }
+
+            .right {
+
+            }
+        }
+    }
+
+    .infinity-bonus {
+        overflow-x: hidden;
+        padding-bottom: 16px;
+
+        .second-title {
+            margin-top: 20px;
+        }
+
+        .label {
+            width: 100%;
+            padding: 0 15px;
+            margin: 12px 0;
+        }        
+
+        .wrapper {
+            .desc {
+                width: 275px;
+                font-size: 16px;
+                line-height: 19px;
+            }
+
+            .levels {
+                margin-top: 20px;
+                padding: 0;
+
+                .main-img {
+                    top: 95px;
+                    left: -190px;
+                    max-width: 600px;
+                    width: 407px;
+                }
+            }
+
+            .levels-desc {
+              padding-top: 12px;
+              width: 80%;
+            }
+        }
+    }
+
+    .income {
+        padding-top: 40px;
+
+        .second-title {
+            margin: 10px 0 30px 0;
+            width: 100%;
+        }
+
+        .wrapper {
+            flex-direction: column;
+
+            .example {
+                margin: 0 auto;
+                margin-bottom: 30px;
+                
+                .btn {
+                    margin-bottom: 20px;
+                }
+            }
+
+            .center-block {
+                top: auto;
+                bottom: -36px;
+            }
+        }
+    }
+
+    .fast-start {
+        padding-top: 50px;
+
+        .second-title {
+            margin: 20px 0;
+        }
+
+        .wrapper {
+            .left {
+                .text {
+                    font-size: 14px;
+                    line-height: 16px;
+                    margin-bottom: 20px;
+                }
+
+                .item {
+                    align-items: center;
+
+                    p {
+                        font-size: 16px;
+                        line-height: 19px;
+                    }
+                }
+            }
+
+            .right {
+                .item {
+                    .name {
+                        min-width: 168px;
+
+                        p {
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .bussiness {
+        overflow-x: hidden;
+        padding-bottom: 70px;
+        position: relative;
+
+        .title {
+            margin-bottom: 10px;
+        }
+
+        ul {
+            margin: 0;
+
+            li {
+                font-size: 16px;
+            }
+        }   
+        
+        .text {
+            margin: 10px 0 40px 18px;
+        }
+
+        .btn {
+            margin-left: 18px;
+        }
+
+        .bg {
+            bottom: -70px;
+            right: -100px;
+        }
+    }
 }
 
 
