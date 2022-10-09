@@ -3269,6 +3269,8 @@ h2 {
   }
   .top-nav {
     background: none;
+    position: relative;
+    z-index: 1;
   }
   .top-nav .mobile {
     display: block;
@@ -3358,7 +3360,7 @@ h2 {
   .main {
     margin-top: -55px;
     position: relative;
-    z-index: -1;
+    z-index: 0;
   }
   .main .mainSlider .item img.img-desktop {
     display: none;

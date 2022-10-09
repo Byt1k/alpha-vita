@@ -53,6 +53,8 @@
 
     .top-nav {
         background: none;
+        position: relative;
+        z-index: 1;
 
         .mobile {
             display: block;
@@ -189,7 +191,7 @@
     .main {
         margin-top: -55px;
         position: relative;
-        z-index: -1;
+        z-index: 0;
 
         .mainSlider {
             .item {
